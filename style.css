@@ -112,13 +112,16 @@
 }
 
 .slogan img {
+  max-height: 100%;
   max-width: 100%;
-  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
   background-size: auto;
-  background-position: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .about {
@@ -212,7 +215,7 @@
   .navbar .logo {
     font-size: 27px;
   }
-  .banner {
-	height: 60vh;
+  .slogan img {
+    padding: 15px;
   }
 }
