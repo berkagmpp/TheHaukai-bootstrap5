@@ -170,6 +170,68 @@ p {
   background-size: auto;
 }
 
+.main-bg-container {
+  background-color: #faf4e4;
+  background-size: cover;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(141px, 396.6px));
+  text-align: center;
+  gap: 0;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-menu {
+  grid-column: 2/4;
+  max-width: 330px;
+  height: 330px;
+  background: url("img/img-menu_240x240.jpg") no-repeat;
+  background-size: cover;
+}
+
+.text-menu {
+  grid-column: 5/7;
+  max-width: 330px;
+  height: 330px;
+  background: url("img/text-menu_240x240.jpg") no-repeat;
+  background-size: cover;
+}
+
+.text-abouthaukai {
+  grid-column: 1/3;
+  max-width: 330px;
+  height: 330px;
+  background: url("img/text-abouthaukai_240x240.jpg") no-repeat;
+  background-size: cover;
+}
+
+.img-abouthaukai {
+  grid-column: 3/6;
+  max-width: 495px;
+  height: 330px;
+  background: url("img/img-abouthaukai_360x240.jpg") no-repeat;
+  background-size: cover;
+}
+
+.img-location {
+  grid-column: 2/4;
+  max-width: 330px;
+  height: 330px;
+  background: url("img/img-location_240x240.jpg") no-repeat;
+  background-size: cover;
+}
+
+.text-location {
+  grid-column: 5/7;
+  max-width: 495px;
+  height: 330px;
+  background: url("img/text-location_360x240.jpg") no-repeat;
+  background-size: cover;
+}
 
 
 /**--- 4. Common content setting ---**/
@@ -209,8 +271,8 @@ p {
 
 .foot .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 42px;
   grid-gap: 20px;
   margin-top: 20px;
   text-align: center;
@@ -218,7 +280,7 @@ p {
 
 .forecast {
   grid-area: 1/1/1/2;
-  margin: 5%;
+  margin-top: 5%;
   margin-right: auto;
 }
 
@@ -229,14 +291,22 @@ p {
 .footcontact {
   grid-area: 1/3/1/4;
   color: #181818;
-  margin: 42px 0;
-  font-size: 14px;
+  margin-top: 10%;
+  font-size: 1em;
   line-height: 2rem;
+}
+
+.footcredit {
+  grid-area: 2/1/3/4;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 #forecast-widget {
   max-width: 100%;
   height: auto; 
+  color: #fff;
 }
 
 #forecast-widget iframe {
@@ -246,7 +316,7 @@ p {
 }
 
 .footnav .menu-list li {
-  margin-top: 32px;
+  margin-top: 2em;
   padding: 0.2rem 0;;
 }
 
@@ -259,9 +329,9 @@ p {
 
 .footcontact .con-box {
   border: 1px solid #fff;
-  border-radius: 5px;
+  border-radius: 0.4em;
   background-color: #fff;
-  padding: 20px;
+  padding: 1.2em;
   display: block;
   margin-left: auto;
   max-width: 300px;
@@ -270,8 +340,8 @@ p {
 .footcontact .con-phone p {
   display: inline;
   border: 1px solid #181818;
-  padding: 0 10px;
-  font-size: 18px;
+  padding: 0 0.6em;
+  font-size: 1.2em;
   font-weight: 500;
 }
 
@@ -279,19 +349,26 @@ p {
   text-align: center;
 }
 
+#text-muted {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
 /**--- 6. Media query ---**/
 
-@media (max-width: 1440px) {
+@media screen and (min-width: 1600px) { /*- for large display -*/
   /*- Common content -*/
   .content {
-    padding: 0 60px;
+    display: block;
+    max-width: 1600px;
+    margin: auto;
   }
   .text-content-container {
     padding: 4rem 9rem;
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   body.disabled {
     overflow: hidden;
   }
@@ -331,7 +408,7 @@ p {
   }
   /*- Main banner -*/
   .banner {
-	  height: 85vh;
+	  height: 80vh;
   }
   .slogan img {
     bottom: 15vh;
@@ -345,9 +422,8 @@ p {
   }
   /*- Footer -*/
   .foot .content {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr), 42px;
     padding-top: 30px;
     grid-gap: 0;
   }
@@ -362,6 +438,11 @@ p {
   .footcontact {
     grid-area: 3/1/4/2;
   }
+  .footcredit {
+    grid-area: 4/1/5/2;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .footcontact .con-box {
     max-width: 300px;
     margin-left: auto;
@@ -369,7 +450,7 @@ p {
   }
 }
 
-@media (max-width: 380px) {
+@media screen and (max-width: 414px) {
   /*- Header -*/
   .navbar.sticky {
     background: #fff;
@@ -382,15 +463,25 @@ p {
   .navbar .logo .letter {
     font-size: 15px;
   }
-  /*- Main banner -*/
   .banner {
-    height: 75vh;
+    background: url("img/s-banner.jpg") no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    height: 85vh;
   }
   .slogan img {
-    padding: 0 15px;
+    padding: 0 4vw;
+    bottom: 15vh;
   }
   /*- Common content -*/
   .text-content-container {
     padding: 1.5rem 0;
+  }
+  .about {
+    padding: 25px 0;
+  }
+   /*- Footer -*/
+  .foot .content {
+    padding: 0 10px;
   }
 }
