@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><span lang="mi">HAUKAI RESTAURANT | Māori kai</span></title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
@@ -17,7 +17,7 @@
         <nav class="navbar">
             <div class="content">
                 <!-- Top Logo -->
-                <div class="logo"><a href="#">HAUKAI
+                <div class="logo"><a href="index.html">HAUKAI
                         <div class="letter"> RESTAURANT</div>
                     </a></div>
                 <!-- Top menu navigation -->
@@ -27,11 +27,11 @@
                         <i class="fas fa-times"></i>
                     </li>
                     <!-- The nav list -->
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">MENU</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="menu.html">MENU</a></li>
                     <li class="booking-box"><a href="#">BOOKING &amp; BUY</a></li>
                 </ul>
                 <!-- The hamburger  icon -->
@@ -43,50 +43,111 @@
     </header>
     <!-- End Header -->
 
-    <!-- Main banner -->
-    <div class="banner" role="img" aria-label="Main banner background">
-        <div class="slogan">
-            <img src="img/banner_slogan.png" alt="The Haukai Restaurant - Tradirional Māori &amp; Modern Māori Fusion">
-        </div>
-    </div>
-
-    <!-- Content -->
     <main>
-        <div class="about">
+        <!-- Index main banner -->
+        <section>
+            <div class="banner" role="img" aria-label="Main banner background">
+                <div class="slogan">
+                    <img src="img/banner_slogan.png" alt="The Haukai Restaurant - Tradirional Māori &amp; Modern Māori Fusion">
+                </div>
+            </div>
+        </section>
+        <!-- Content -->
+        <!-- Index main text section-->
+        <section class="about">
             <div class="content">
                 <h1 class="title">THE HAUKAI RESTAURANT</h1>
                 <div class="blank-box"></div>
-                <h2><span lang="mi">Tradirional Māori &amp; Modern Māori Fusion</span></h2>
+                <h2><span lang="mi">Traditional Māori &amp; Modern Māori Fusion</span></h2>
                 <div class="text-content-container">
                     <p>"Drawing inspiration from trditional Māori cuisine, The Haukai reinvents dishes to create a timeless
                         fusion of old and new, blending familiar comforts with an inventive, playful modern flair."</p>
                 </div>
             </div>
-        </div>
-        <div class="main-bg-container">
-            <div class="content">
-                <div class="main-grid">
-                    <div class="img-menu">
-                        <!-- <img src="img/img-menu_280x280.jpg" alt="An image for menu"> -->
+        </section>
+        <!-- Index main content link section-->
+        <section class="main-bg-container">
+            <div class="main-bg-cover">
+                <div class="content">
+                    <div class="main-wrapper">
+                        <div class="img-menu"></div>
+                        <div id="text-menu">
+                            <div class="img-cover">
+                                <a href="menu.html"><h4>OUR<br>MENUS</h4></a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="blank1">b1 blank1</div> -->
-                    <div class="text-menu">1 text-menu</div>
-                </div>
-                <div class="main-grid">
-                    <div class="text-abouthaukai">3 text-abouthaukai</div>
-                    <div class="img-abouthaukai">
-                        <!-- <img src="img/img-abouthaukai_560x280.jpg" alt="An image for about Haukai"> -->
+                    <div class="main-wrapper">
+                        <div id="text-abouthaukai">
+                            <div class="img-cover">
+                                <a href="about_us.html"><h4>ABOUT<br>HAUKAI</h4></a>
+                            </div>
+                        </div>
+                        <div class="img-abouthaukai"></div>
                     </div>
-                </div>
-                <div class="main-grid">
-                    <div class="img-location">
-                        <!-- <img src="img/img-location_280x280.jpg" alt="An image for location"> -->
+                    <div class="main-wrapper">
+                        <div class="img-location"></div>
+                        <div id="text-location">
+                            <div class="img-cover">
+                                <a href="contact.html"><h4>LOCATION</h4></a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- <div class="blank2">b2 blank2</div> -->
-                    <div class="text-location">6 text-location</div>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Index main posting link section-->
+        <section class="post-bg-container">
+            <div class="post-bg-cover">
+                <div class="content">
+                    <div class="content-container">
+                        <div class="section-head">
+                            <h2>BLOG</h2>
+                        </div>
+                        <article class="main-post-one-container">
+                            <div class="post-item">
+                                <div id="main-post-one-pic" onclick="location.href='blog.html';"></div>
+                                <div class="post-one">
+                                    <div class="post-heading">
+                                        <a href="#"><h3>Potato dishes from the central North Island</h3></a>
+                                    </div>
+                                    <div class="post-date">
+                                        <p>2021.12.30</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="main-post-two-container">
+                            <div class="post-item">
+                                <div id="main-post-two-pic" onclick="location.href='blog.html';"></div>
+                                <div class="post-two">
+                                    <div class="post-heading">
+                                        <a href="#"><h3>Fusion style using Bluff Oyster</h3></a>
+                                    </div>
+                                    <div class="post-date">
+                                        <p>2022.01.15</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="main-post-three-container">
+                            <div class="post-item">
+                                <div id="main-post-three-pic" onclick="location.href='blog.html';"></div>
+                                <div class="post-three">
+                                    <div class="post-heading">
+                                        <a href="#"><h3 lang="mi">The ingredients of Hāngi using heated rocks</h3></a>
+                                    </div>
+                                    <div class="post-date">
+                                        <p>2022.02.06</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="post-readmore"><a href="#">Read More ></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- End contents -->
 
@@ -94,38 +155,42 @@
     <footer>
         <div class="foot">
             <div class="content">
-                <!-- Weather-forecast -->
-                <div class="forecast">
-                    <h6>WEATHER FORECAST</h6><br>
-                    <!-- Weather-forecast widget-->
-                    <div id="forecast-widget">
-                        <iframe name="Weather-forecast widget"
-                            src="https://www.metservice.com/weather-widget/widget?params=white|small|portrait|days-3|classic&loc=Kerikeri">
-                        </iframe>
-                    </div>
-                </div>
-                <!-- footer-nav -->
-                <div class="footnav">
-                    <ul class="menu-list">
-                        <li><a href="#">PRIVACY POLICY</a></li>
-                        <li><a href="#">TERMS &amp; CONDITIONS</a></li>
-                        <li><a href="#">CONTACT &amp; HELP</a></li>
-                        <li><a href="#">FOR EMPLOYEES</a></li>
-                    </ul>
-                </div>
-                <!-- footer-contact -->
-                <div class="footcontact">
-                    <div class="con-box">
-                        <div class="con-phone">
-                            <p>09 401 4019</p>
+                <div class="content-container">
+                    <!-- sns icons -->
+                    <div class="footicon">
+                        <div class="icon-container">
+                            <img src="img/icon_facebook.png">
+                            <img src="img/icon_insta.png">
+                            <img src="img/icon_google.png">
+                            <img src="img/icon_youtube.png">
+                            <img src="img/icon_pinter.png">
                         </div>
-                        <div class="con-address">
-                            <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
+                        <div class="foot-opentext">
+                            <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
                         </div>
                     </div>
-                </div>
-                <div class="footcredit">
-                    <p id="text-muted"></p>
+                    <!-- footer-nav -->
+                    <div class="footnav">
+                        <ul class="menu-list">
+                            <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
+                            <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+                            <li><a href="contact.html">CONTACT &amp; HELP</a></li>
+                            <li><a href="#">FOR EMPLOYEES</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer-contact -->
+                    <div class="footcontact">
+                            <div class="con-phone">
+                                <p>09 401 4019</p>
+                            </div>
+                            <div class="con-address">
+                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
+                            </div>
+                    </div>
+                    <div class="footcredit">
+                        <div id="text-muted"></div>
+                        <div id="right-text">The HAUKAI All rights reserved</div>
+                    </div>
                 </div>        
             </div>
         </div>
@@ -155,10 +220,9 @@
         let now = new Date;
         let curYear = now.getFullYear();
         let credit = document.getElementById("text-muted");
-        if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ", HAUKAI All rights reserved";
-        else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ", HAUKAI All rights reserved";
+        if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ",";
+        else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ",";
     </script>
 
 </body>
-
 </html>

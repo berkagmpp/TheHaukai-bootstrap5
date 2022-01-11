@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span lang="mi">HAUKAI RESTAURANT | Māori kai</span></title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top navbar -->
+        <nav class="navbar">
+            <div class="content">
+                <!-- Top Logo -->
+                <div class="logo"><a href="index.html">HAUKAI
+                        <div class="letter"> RESTAURANT</div>
+                    </a></div>
+                <!-- Top menu navigation -->
+                <ul class="menu-list">
+                    <!-- The x icon -->
+                    <li class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </li>
+                    <!-- The nav list -->
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about_us.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li class="booking-box"><a href="#">BOOKING &amp; BUY</a></li>
+                </ul>
+                <!-- The hamburger  icon -->
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <main>
+        <section>
+
+        </section>
+    </main>
+    <!-- End contents -->
+    <!-- Footer -->
+    <footer>
+        <div class="foot">
+            <div class="content">
+                <div class="content-container">
+                    <!-- sns icons -->
+                    <div class="footicon">
+                        <div class="icon-container">
+                            <img src="img/icon_facebook.png">
+                            <img src="img/icon_insta.png">
+                            <img src="img/icon_google.png">
+                            <img src="img/icon_youtube.png">
+                            <img src="img/icon_pinter.png">
+                        </div>
+                        <div class="foot-opentext">
+                            <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
+                        </div>
+                    </div>
+                    <!-- footer-nav -->
+                    <div class="footnav">
+                        <ul class="menu-list">
+                            <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
+                            <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+                            <li><a href="contact.html">CONTACT &amp; HELP</a></li>
+                            <li><a href="#">FOR EMPLOYEES</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer-contact -->
+                    <div class="footcontact">
+                            <div class="con-phone">
+                                <p>09 401 4019</p>
+                            </div>
+                            <div class="con-address">
+                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
+                            </div>
+                    </div>
+                    <div class="footcredit">
+                        <p id="text-muted"></p>
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = () => {
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+
+        let copyYear = "2021";
+        let now = new Date;
+        let curYear = now.getFullYear();
+        let credit = document.getElementById("text-muted");
+        if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ", HAUKAI All rights reserved";
+        else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ", HAUKAI All rights reserved";
+    </script>
+
+</body>
+</html>
