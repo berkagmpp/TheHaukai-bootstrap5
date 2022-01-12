@@ -10,7 +10,8 @@
 3. Header
 4. Footer
 5. Index page
-6. Media query
+6. Adjustment other pages
+7. Media query
 
 
 
@@ -36,10 +37,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 600;
   text-align: center;
-  line-height: 1.5rem;
 }
 
 h3 {
@@ -58,19 +59,25 @@ h6 {
 
 p {
   padding-top: 1.3rem;
-  text-align: justify;
 }
 
 a { 
   text-decoration: none;
-}
-
-a:visited {
-  color: #fff;
+  font-size: 1rem;
+  color: #000;
 }
 
 a:hover {
   color: #d89e68;
+}
+
+a:visited {
+  color: #000;
+}
+
+li {
+  color: #000;
+  list-style: none;
 }
 
 
@@ -109,9 +116,8 @@ img {
   padding: 3rem 13rem;
 }
 
-.text-content-container p{
+.text-content-container p {
   font-size: 1.2rem;
-  text-align: center;
 }
 
 .inner-page-banner {
@@ -120,12 +126,7 @@ img {
   position: relative;
 }
 
-.inner-page-banner-desk-inner {
-  display: block;
-  height: 100%;
-}
-
-.inner-page-banner-desk-inner img {
+.inner-page-banner img {
   height: 100%;
   object-fit: cover;
   position: absolute;
@@ -135,27 +136,59 @@ img {
   max-width: 100%;
 }
 
-.inner-page-banner-inner {
-  display: none;
+.banner_text_container {
+  position: relative;
   height: 100%;
+  z-index: 1;
+  width: 100%;
 }
 
-.inner-page-banner-inner img {
-  height: 100%;
-  object-fit: cover;
+.banner-box {
   position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  max-width: 100%;
+  left:0; 
+  right:0;
+  bottom: 4rem;
+  margin: auto;
+  text-align: center;
 }
+
+.banner-box h1 {
+  letter-spacing: 0.1rem;
+}
+
+.sub-menu-container {
+  margin: 3rem 0;
+  max-height: 300px;
+}
+
+.sub-menu-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap : wrap;
+}
+
+.sub-menu-list li {
+  margin: 0 1.5rem;
+  list-style: inside;
+}
+
+.sub-menu-list li a {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.sub-menu-list li a:visited {
+  color: #000;
+}
+
+
 
 /**--- 3. Header ---**/
 
 .navbar {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   padding: 25px 0;
 }
 
@@ -194,7 +227,6 @@ img {
 }
 
 .navbar .menu-list li {
-  list-style: none;
   margin-left: 1.5rem;
 }
 
@@ -205,7 +237,7 @@ img {
 }
 
 .menu-list li a {
-  color: #181818;
+  color: #000;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
@@ -215,6 +247,10 @@ img {
 .menu-list li a:hover {
   color: #d89e68;
   font-weight: 700;
+}
+
+.menu-list li a:visited {
+  color: #000;
 }
 
 .menu-list .booking-box a {
@@ -376,6 +412,17 @@ img {
   background-size: auto;
 }
 
+/*- 5. Index page : text section -*/
+.about .text-content-container p {
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
 /*- 5. Index page : content link section -*/
 .main-bg-container {
   background: url("../img/banner.jpg") no-repeat;
@@ -458,7 +505,7 @@ img {
   z-index: 1;
 }
 
-.img-cover h4{
+.img-cover h4 {
   font-size: 2em;
   font-weight: 500;
   line-height: 1em;
@@ -589,7 +636,17 @@ img {
 
 
 
-/**--- 6. Media query ---**/
+/**--- 6. Adjustment other pages ---**/
+
+/*- Privacy policy page -*/
+.privacy-text .text-content-container {
+  padding: 4rem 2rem;
+  line-height: 2rem;
+}
+
+
+
+/**--- 7. Media query ---**/
 
 @media screen and (min-width: 1600px) { /*- for large display -*/
   /*- Common content -*/
@@ -600,6 +657,9 @@ img {
   }
   .text-content-container {
     padding: 4rem 9rem;
+  }
+  h1 {
+    font-size: 2.5rem;
   }
   h2 {
     font-size: 1.7rem;
@@ -653,6 +713,11 @@ img {
   .post-readmore a {
     font-size: 1.4rem;
   }
+  /*- Privacy policy page -*/
+  .privacy-text .text-content-container {
+    padding: 4rem 2rem;
+    line-height: 3rem;
+  }
 }
 
 @media screen and (max-width: 900px) { /*- for ipad and tablets display -*/
@@ -670,14 +735,11 @@ img {
     height: 70vh;
     max-height: 300px;
   }
-  .inner-page-banner-desk-inner {
-    display: none;
+  .banner-box {
+    font-size: 1rem;
   }
-  .inner-page-banner-inner {
-    display: block;
-  }
-  .inner-page-banner img {
-    position: static;
+  .sub-menu-list li {
+    margin: 1.5rem;
   }
   /*- Header -*/
   .icon {
@@ -792,8 +854,8 @@ img {
     height: 0;
     padding-top: calc(330/330 * 100%);
   }
-  .img-cover h4{
-    font-size: 1.5em;
+  .img-cover h4 {
+    font-size: 1.6em;
   }
   /*- Index page : posting link section -*/
   .post-bg-container .content-container {
@@ -869,6 +931,31 @@ img {
     height: 50vh;
     max-height: 200px;
   }
+  .banner_text_container {
+    height: auto;
+  }
+  .banner-box {
+    position: static;
+    padding: 14rem 0 0;
+  }
+  .banner-box h1 {
+    letter-spacing: normal;
+    font-size: 2rem;
+  }
+  .sub-menu-container {
+    margin: 5rem 0;
+  }
+  .sub-menu-list {
+    display: block;
+    text-align: center;
+  }
+  .sub-menu-list li {
+    margin: 2rem 0;
+    list-style: inside;
+  }
+  .sub-menu-list li a {
+    font-size: 1.2rem;
+  }
   /*- Header -*/
   .navbar {
     padding: 0;
@@ -884,7 +971,7 @@ img {
     font-size: 15px;
   }
   .navbar .menu-list li {
-    margin: 1.8em 0;
+    margin: 13% 0;
   }
   /*- Footer -*/
   .foot .content-container {
@@ -940,5 +1027,12 @@ img {
     position: relative;
     margin: 0.6rem 0;
   }
+  /*- Privacy policy page -*/
+  .privacy-text .text-content-container {
+    padding: 4rem 0.6rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+  
 }
 
