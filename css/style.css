@@ -51,6 +51,13 @@ h3 {
   color: #000;
 }
 
+h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: left;
+  color: #000;
+}
+
 h6 {
 	font-size: 1.2rem;
 	color: #fff;
@@ -112,6 +119,14 @@ img {
   margin: auto;
 }
 
+.bg-container {
+  background: url("../img/banner.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
 .text-content-container {
   padding: 3rem 13rem;
 }
@@ -158,7 +173,9 @@ img {
 
 .sub-menu-container {
   margin: 3rem 0;
-  max-height: 300px;
+  max-height: 370px;
+  background-color: #f5f5f5;
+  padding: 1rem;
 }
 
 .sub-menu-list {
@@ -168,12 +185,12 @@ img {
 }
 
 .sub-menu-list li {
-  margin: 0 1.5rem;
+  margin: 1.5rem;
   list-style: inside;
 }
 
 .sub-menu-list li a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: underline;
 }
 
@@ -181,7 +198,83 @@ img {
   color: #000;
 }
 
+#section-one, #section-two, #section-three, #section-four, #section-five {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
 
+#section-five {
+  margin-bottom: 0;
+}
+
+.split-box-one {
+  width: 35%;
+}
+
+.split-box-two {
+  width: 65%;
+}
+
+.split-box-three {
+  width: 100%;
+  display: none;
+}
+
+.bg-cover-35, .bg-cover-65 {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.bg-cover-35 {
+  padding-top: calc(100/100 * 100%);
+  background-color: rgba(219, 236, 255, 0.3);
+}
+
+.bg-cover-65 {
+  padding-top: calc(65/120 * 100%);
+  background-color: rgba( 255, 255, 255, 0.8 );
+}
+
+.text-content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+  position: absolute;
+}
+
+.heading-area, .text-area {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-area {
+  padding: 1.5rem;
+  width: fit-content;
+}
+
+.text-area p {
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.con-phone p {
+  border: 1px solid #fff;
+  border-radius: 0.4em;
+  padding: 0.3em 0.7em;
+  color: #fff;
+  letter-spacing: 0.3rem;
+}
+
+.text-area .con-phone p {
+  color: #000;
+}
 
 /**--- 3. Header ---**/
 
@@ -285,6 +378,10 @@ img {
   background: #004368;
 }
 
+.foot h4 {
+  text-align: center;
+}
+
 .foot .content-container {
   grid-template-rows: 1fr auto;
   padding-top: 3rem;
@@ -360,18 +457,14 @@ img {
   padding-bottom: 1.9rem;
 }
 
+.footnav .menu-list a:visited {
+  color: #fff;
+}
+
 .footcontact .con-phone {
   display: flex; 
   justify-content: center; 
   align-items: center;
-}
-
-.footcontact .con-phone p {
-  border: 1px solid #fff;
-  border-radius: 0.4em;
-  padding: 0.3em 0.7em;
-  color: #fff;
-  letter-spacing: 0.3rem;
 }
 
 .footcontact .con-address {
@@ -424,13 +517,6 @@ img {
 }
 
 /*- 5. Index page : content link section -*/
-.main-bg-container {
-  background: url("../img/banner.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 .main-bg-cover {
   background-color: rgba(193, 210, 226, 0.8);
 }
@@ -445,54 +531,49 @@ img {
   margin-right: auto;
 }
 
+.img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-location, #text-location {
+  height: 330px;
+  background-size: cover;
+}
+
+.img-menu, #text-menu, #text-abouthaukai {
+  max-width: 330px;
+}
+
+.img-abouthaukai, .img-location, #text-location {
+  max-width: 495px;
+}
+
 .img-menu {
   grid-column: 2/4;
-  max-width: 330px;
-  height: 330px;
   background: url("../img/img-menu_330x330.jpg") no-repeat;
-  background-size: cover;
 }
 
 #text-menu {
   grid-column: 5/7;
-  max-width: 330px;
-  height: 330px;
   background: url("../img/text-menu_330x330.jpg") no-repeat;
-  background-size: cover;
   position: relative;
 }
 
 #text-abouthaukai {
   grid-column: 1/3;
-  max-width: 330px;
-  height: 330px;
   background: url("../img/text-abouthaukai_330x330.jpg") no-repeat;
-  background-size: cover;
   position: relative;
 }
 
 .img-abouthaukai {
   grid-column: 3/6;
-  max-width: 495px;
-  height: 330px;
   background: url("../img/img-abouthaukai_495x330.jpg") no-repeat;
-  background-size: cover;
 }
 
 .img-location {
   grid-column: 1/4;
-  max-width: 495px;
-  height: 330px;
   background: url("../img/img-location_495x330.jpg") no-repeat;
-  background-size: cover;
 }
 
 #text-location {
   grid-column: 5/7;
-  max-width: 495px;
-  height: 330px;
   background: url("../img/text-location_495x330.jpg") no-repeat;
-  background-size: cover;
   position: relative;
 }
 
@@ -512,19 +593,15 @@ img {
   color: #fff;
 }
 
-/*- 5. Index page : posting link section -*/
-.post-bg-container {
-  background: url("../img/banner.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
 
+
+
+/*- 5. Index page : posting link section -*/
 .post-bg-cover {
   background-color: rgba( 255, 255, 255, 0.7 );
 }
 
-.post-bg-container .content-container {
+.post-bg-cover .content-container {
   grid-template-rows: auto 1fr auto;
   column-gap: 2.5rem;
   max-width: 1280px;
@@ -550,52 +627,44 @@ img {
   flex-grow: 1;
 }
 
-.main-post-one-container {
-  grid-column: 1/2;
-  grid-row: 2/3;
+#main-post-one-pic, #main-post-two-pic, #main-post-three-pic {
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  padding-top: calc(370/370 * 100%);
+}
+
+.main-post-one-containe, .main-post-two-container, .main-post-three-container {
   display: flex;
   flex-wrap: wrap;
   margin: 0.5rem; /* for iOS -> 'gap' is not working */
 }
 
+.main-post-one-container {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
 #main-post-one-pic {
   background: url("../img/blog_1_370x370.jpg") no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 0;
-  padding-top: calc(370/370 * 100%);
 }
 
 .main-post-two-container {
   grid-column: 2/3;
   grid-row: 2/3;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.5rem; /* for iOS -> 'gap' is not working */
 }
 
 #main-post-two-pic {
   background: url("../img/blog_2_370x370.jpg") no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 0;
-  padding-top: calc(370/370 * 100%);
 }
 
 .main-post-three-container {
   grid-column: 3/4;
   grid-row: 2/3;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.5rem; /* for iOS -> 'gap' is not working */
 }
 
 #main-post-three-pic {
   background: url("../img/blog_3_370x370.jpg") no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 0;
-  padding-top: calc(370/370 * 100%);
 }
 
 .post-readmore {
@@ -643,8 +712,14 @@ img {
   padding: 4rem 2rem;
   line-height: 2rem;
 }
-
-
+/*- About us page -*/
+.map_box iframe{
+  position: relative;
+	width: 100%;
+  height: 35vh;
+	border: 0;
+  margin-bottom: 4em;
+}
 
 /**--- 7. Media query ---**/
 
@@ -662,7 +737,14 @@ img {
     font-size: 2.5rem;
   }
   h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
+  }
+  .heading-area, .text-area {
+    padding: 4rem;
+  }
+  .text-area p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
   }
   /*- Header -*/
   .navbar .logo a {
@@ -741,6 +823,33 @@ img {
   .sub-menu-list li {
     margin: 1.5rem;
   }
+  #section-one, #section-two, #section-three, #section-four, #section-five {
+    display: block;
+  }
+  .split-box-one, .split-box-two {
+    width: 100%;
+  }
+  #section-two .split-box-one, #section-four .split-box-one {
+    display: none;
+  }
+  .split-box-three {
+    display: block;
+  }
+  .bg-cover-35 {
+    padding: 3em;
+  }
+  .bg-cover-65 {
+    padding: 3em;
+    min-height: 340px;
+  }
+  .text-area {
+    padding: 0.8rem;
+  }
+  .text-area p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
   /*- Header -*/
   .icon {
     display: block;
@@ -817,48 +926,36 @@ img {
   .main-wrapper {
     grid-template-columns: repeat(2, minmax(155px, 330px));
   }
-  .img-menu {
-    grid-column: 1/2;
+
+  .img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-location, #text-location {
     width: 100%;
     height: 0;
     padding-top: calc(330/330 * 100%);
-    text-align: center;
+  }
+
+  .img-menu {
+    grid-column: 1/2;
   }
   #text-menu {
     grid-column: 2/3;
-    width: 100%;
-    height: 0;
-    padding-top: calc(330/330 * 100%);
   }
   #text-abouthaukai {
     grid-column: 1/2;
-    width: 100%;
-    height: 0;
-    padding-top: calc(330/330 * 100%);
   }
   .img-abouthaukai {
     grid-column: 2/3;
-    width: 100%;
-    height: 0;
-    padding-top: calc(330/330 * 100%);
   }
   .img-location {
     grid-column: 1/2;
-    width: 100%;
-    height: 0;
-    padding-top: calc(330/330 * 100%);
   }
   #text-location {
     grid-column: 2/3;
-    width: 100%;
-    height: 0;
-    padding-top: calc(330/330 * 100%);
   }
   .img-cover h4 {
     font-size: 1.6em;
   }
   /*- Index page : posting link section -*/
-  .post-bg-container .content-container {
+  .post-bg-cover .content-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto) 5rem;
     padding: 1rem 0;
@@ -914,6 +1011,11 @@ img {
   .post-date p {
     font-size: 1rem;
   }
+  /**--- 6. Adjustment other pages ---**/
+  /*- About us page -*/
+  .map_box iframe{
+    height: 90vw;
+  }
 }
 
 @media screen and (max-width: 414px) { /*- for mobile display -*/
@@ -956,11 +1058,14 @@ img {
   .sub-menu-list li a {
     font-size: 1.2rem;
   }
-  /*- Header -*/
-  .navbar {
-    padding: 0;
+  .bg-cover-65 {
+    min-height: 460px;
   }
-  .navbar.sticky {
+  .text-area {
+    padding: 0.6rem;
+  }
+  /*- Header -*/
+  .navbar, .navbar.sticky  {
     padding: 0;
   }
   .navbar .logo a {
@@ -1001,7 +1106,7 @@ img {
     font-size: 1.4rem;
     line-height: 1.8rem;
   }
-  .main-bg-container .content {
+  .main-bg-cover .content {
     padding: 0 0.8em;
   }
   /*- Index page : posting link section-*/
@@ -1009,7 +1114,7 @@ img {
     padding-top: 0;
     font-size: 1.3rem;
   }
-  .post-bg-container .content-container {
+  .post-bg-cover .content-container {
     padding: 0.3rem;
   }
   .post-item {
