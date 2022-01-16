@@ -17,7 +17,7 @@
 
 /**--- 1. Typography ---**/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
 
 * {
   margin: 0;
@@ -119,11 +119,20 @@ img {
   margin: auto;
 }
 
+label {
+  font-size: 1.2rem;
+}
+
+input, textarea {
+  border:1px dotted black;
+  font-size: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
 .bg-container {
-  background: url("../img/banner.jpg") no-repeat;
+  background: url("../img/banner.jpg") no-repeat fixed center;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   position: relative;
 }
 
@@ -198,14 +207,18 @@ img {
   color: #000;
 }
 
-#section-one, #section-two, #section-three, #section-four, #section-five {
+#section-one, #section-two, #section-three, #section-four, #section-five, #section-six, #section-seven {
   display: flex;
   justify-content: space-between;
   margin-bottom: 4rem;
 }
 
-#section-five {
+#section-five, #section-seven {
   margin-bottom: 0;
+}
+
+#section-six, #section-seven {
+  display: block;
 }
 
 .split-box-one {
@@ -221,7 +234,11 @@ img {
   display: none;
 }
 
-.bg-cover-35, .bg-cover-65 {
+.split-box-four {
+  width: 100%;
+}
+
+.bg-cover-35, .bg-cover-65, .bg-cover-100, .bg-cover-100-text {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -236,6 +253,17 @@ img {
 .bg-cover-65 {
   padding-top: calc(65/120 * 100%);
   background-color: rgba( 255, 255, 255, 0.8 );
+}
+
+.bg-cover-100 {
+  background-color: rgba(219, 236, 255, 0.3);
+  min-height: 5rem;
+}
+
+.bg-cover-100-text {
+  background-color: rgba( 255, 255, 255, 0.8 );
+  min-height: 20rem;
+  height: auto;
 }
 
 .text-content {
@@ -260,6 +288,7 @@ img {
 
 .text-area p {
   padding: 0;
+  font-weight: 300;
   font-size: 1.2rem;
   line-height: 1.7rem;
 }
@@ -275,6 +304,70 @@ img {
 .text-area .con-phone p {
   color: #000;
 }
+
+.flex-container {
+  display: flex;
+  padding: 2rem 3rem;
+}
+
+.flex-container .blog {
+  flex: 1;
+  margin: 0 1.5%; /* for iOS -> 'gap' is not working */
+  min-height: 30vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: transparent;
+  border: 5px solid transparent;
+}
+
+.blog .img {
+  flex: 5;
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+.blog .img img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+.blog .heading, .blog .content {
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3 ;
+  -webkit-box-orient: vertical;
+}
+.blog .heading {
+  margin-top: 1rem;
+  line-height: 1.8rem;
+}
+.blog .heading h4 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.blog .date {
+  flex: 1;
+  text-align: end;
+  padding: 0.5rem;
+}
+.blog .content {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: left;
+}
+
+
 
 /**--- 3. Header ---**/
 
@@ -485,11 +578,9 @@ img {
 
 /*- 5. Index page : main banner -*/
 .banner {
-  background: url("../img/banner.jpg") no-repeat;
+  background: url("../img/banner.jpg") no-repeat fixed center;
   height: 95vh;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .slogan img {
@@ -527,54 +618,68 @@ img {
   text-align: center;
   justify-content: center;
   gap: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-location, #text-location {
+.img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-restaurant_1, .img-location, #text-location {
   height: 330px;
-  background-size: cover;
+  position: relative;
 }
 
-.img-menu, #text-menu, #text-abouthaukai {
+.img-menu, .img-restaurant_1, .img-restaurant_2, #text-menu, #text-abouthaukai {
   max-width: 330px;
 }
 
-.img-abouthaukai, .img-location, #text-location {
+.img-abouthaukai, .img-restaurant_2, .img-location, #text-location {
   max-width: 495px;
 }
 
 .img-menu {
   grid-column: 2/4;
-  background: url("../img/img-menu_330x330.jpg") no-repeat;
+  background: url("../img/img-menu_330x330.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #text-menu {
   grid-column: 5/7;
   background: url("../img/text-menu_330x330.jpg") no-repeat;
-  position: relative;
+  background-size: cover;
 }
 
 #text-abouthaukai {
   grid-column: 1/3;
   background: url("../img/text-abouthaukai_330x330.jpg") no-repeat;
-  position: relative;
+  background-size: cover;
 }
 
 .img-abouthaukai {
   grid-column: 3/6;
   background: url("../img/img-abouthaukai_495x330.jpg") no-repeat;
+  background-size: cover;
+}
+
+.img-restaurant_1 {
+  grid-column: 2/4;
+  background: url("../img/img-restaurant_1_330x330.jpg") no-repeat;
+  background-size: cover;
+}
+
+.img-restaurant_2 {
+  grid-column: 4/7;
+  background: url("../img/img-restaurant_2_495x330.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .img-location {
   grid-column: 1/4;
-  background: url("../img/img-location_495x330.jpg") no-repeat;
+  background: url("../img/img-location_495x330.jpg") no-repeat center;
+  background-size: cover;
 }
 
 #text-location {
   grid-column: 5/7;
   background: url("../img/text-location_495x330.jpg") no-repeat;
-  position: relative;
+  background-size: cover;
 }
 
 .img-cover {
@@ -593,24 +698,12 @@ img {
   color: #fff;
 }
 
-
-
-
 /*- 5. Index page : posting link section -*/
 .post-bg-cover {
   background-color: rgba( 255, 255, 255, 0.7 );
 }
 
-.post-bg-cover .content-container {
-  grid-template-rows: auto 1fr auto;
-  column-gap: 2.5rem;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .section-head {
-  grid-column: 1/3;
-  grid-row: 1/2;
   padding-top: 3em;
 }
 
@@ -621,50 +714,8 @@ img {
   font-weight: 700;
 }
 
-.post-item {
-  min-height: 200px;
-  flex-basis: 150px;
-  flex-grow: 1;
-}
-
-#main-post-one-pic, #main-post-two-pic, #main-post-three-pic {
-  background-size: cover;
-  width: 100%;
-  height: 0;
-  padding-top: calc(370/370 * 100%);
-}
-
-.main-post-one-containe, .main-post-two-container, .main-post-three-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0.5rem; /* for iOS -> 'gap' is not working */
-}
-
-.main-post-one-container {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-
-#main-post-one-pic {
-  background: url("../img/blog_1_370x370.jpg") no-repeat;
-}
-
-.main-post-two-container {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-
-#main-post-two-pic {
-  background: url("../img/blog_2_370x370.jpg") no-repeat;
-}
-
-.main-post-three-container {
-  grid-column: 3/4;
-  grid-row: 2/3;
-}
-
-#main-post-three-pic {
-  background: url("../img/blog_3_370x370.jpg") no-repeat;
+.post-bg-cover .flex-container {
+  padding: 2rem 0;
 }
 
 .post-readmore {
@@ -686,23 +737,6 @@ img {
   font-weight: 500;
 }
 
-.post-heading a h3 {
-  font-size: 1.3rem;
-  padding-top: 1rem;
-}
-
-.post-heading a:hover h3 {
-  color:#d89e68;
-  font-weight: 500;
-}
-
-.post-date {
-  text-align: right;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 1.2em;
-}
-
 
 
 /**--- 6. Adjustment other pages ---**/
@@ -720,6 +754,142 @@ img {
 	border: 0;
   margin-bottom: 4em;
 }
+/*- Contact page -*/
+.entercs {
+  width: 100%;
+  padding: 1rem 3rem;
+  min-height: 24rem;
+}
+.enter_bundle {
+  display: block;
+  position: relative;
+  padding: 1rem 6rem 0.5rem 1rem; 
+}
+.bundle_tit {
+  width: 18%;
+  position: absolute;
+  left: 0;
+  text-align: right;
+}
+.bundle_input {
+  width: 100%;
+  padding: 0 0 0 13rem;
+  position: relative;
+}
+.submit-cover {
+  position: absolute;
+  right: 6rem;
+  width: 100px;
+  height: auto;
+}
+#submit {
+  border: none;
+  background-color: #787878;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+}
+/*- Menu page -*/
+.menus-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.menus-container .menus {
+  flex: 1;
+  width: 100%;
+  border: 1px solid #787877;
+  margin: 2%; /* for iOS -> 'gap' is not working */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 310px;
+  padding: 1rem;
+}
+.menu_category, .menu_item {
+  margin: 1.2rem;
+  text-align: center;
+}
+.menu_category h2 {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+.menu_item .item {
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-width: 100%;
+}
+.menu_img-box, .menu_img-box-two, .menu_img-box img, .menu_img-box-two img {
+  max-width: 100%;
+}
+
+.menu_img-box {
+  height: 566px;
+  zoom: 1.2;
+  line-height: 566px;
+  overflow: hidden;
+  margin: 2px;
+}
+.menu_img-box-two {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.menu_img-box img {
+  max-width: 420px;
+  vertical-align: middle;
+}
+.menu_item .item span {
+  margin-left: 1rem;
+  color: #ad743e;
+  font-weight: 700;
+}
+.menu_item .description {
+  font-weight: 300;
+}
+.memu-table {
+  display: table;
+  margin: 0.5rem 0 3rem 0;
+}
+tbody {
+  display: table-row-group;
+}
+tr {
+  display: table-row;
+  text-align: left;
+}
+th, td {
+  display: table-cell;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+th h4 {
+  font-weight: 700;
+  padding-top: 1.3rem;
+  color: #004368;
+}
+.bever_price_head, .bever_price {
+  margin-left: 2rem;
+  color: #ad743e;
+  text-align: left;
+  font-weight: 500;
+}
+.bever_price_head {
+  font-weight: 700;
+}
+.menes_text {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  order: 3;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10%;
+}
+
+
 
 /**--- 7. Media query ---**/
 
@@ -762,10 +932,9 @@ img {
   }
   /*- Index page : main banner -*/
   .banner {
-    background: url("../img/l-banner_2200x1117.jpg") no-repeat;
+    background: url("../img/l-banner_2200x1117.jpg") no-repeat center;
     height: 94vh;
     background-size: cover;
-    background-position: center;
   }
   /*- Index page : text section -*/
   .title {
@@ -782,13 +951,6 @@ img {
     font-size: 2.4rem;
   }
   /*- Index page : posting link section -*/
-  .post-heading a h3 {
-    font-size: 1.6rem;
-    line-height: 2rem;
-  }
-  .post-date {
-    font-size: 1.3rem;
-  }
   .post-readmore {
     padding: 4rem 0;
   }
@@ -799,6 +961,36 @@ img {
   .privacy-text .text-content-container {
     padding: 4rem 2rem;
     line-height: 3rem;
+  }
+  /*- Contact page -*/
+  .bundle_tit {
+    width: 12%;
+  }
+  /*- Blog page -*/
+  .blog .img img {
+    max-width: 400px;
+  }
+  .blog .heading, .blog .content {
+    padding: 0 2rem;
+    min-height: 2rem;
+  }
+  .blog .heading h4 {
+    font-size: 1.6rem;
+  }
+  .blog .date {
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+  } 
+  .blog .content {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  } 
+  /*- Menu page -*/
+  .menu_img-box {
+    margin: 10px;
+  }
+  .menu_img-box img {
+    max-width: 590px;
   }
 }
 
@@ -849,7 +1041,9 @@ img {
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
-
+  .flex-container {
+    flex-direction: column;
+  }
   /*- Header -*/
   .icon {
     display: block;
@@ -926,29 +1120,15 @@ img {
   .main-wrapper {
     grid-template-columns: repeat(2, minmax(155px, 330px));
   }
-
-  .img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-location, #text-location {
+  .img-menu, #text-menu, #text-abouthaukai, .img-abouthaukai, .img-location, #text-location, .img-restaurant_1, .img-restaurant_2 {
     width: 100%;
     height: 0;
     padding-top: calc(330/330 * 100%);
   }
-
-  .img-menu {
+  .img-menu, #text-abouthaukai, .img-restaurant_1, .img-location {
     grid-column: 1/2;
   }
-  #text-menu {
-    grid-column: 2/3;
-  }
-  #text-abouthaukai {
-    grid-column: 1/2;
-  }
-  .img-abouthaukai {
-    grid-column: 2/3;
-  }
-  .img-location {
-    grid-column: 1/2;
-  }
-  #text-location {
+  #text-menu, .img-abouthaukai, .img-restaurant_2,  #text-location {
     grid-column: 2/3;
   }
   .img-cover h4 {
@@ -965,56 +1145,66 @@ img {
     grid-row: 1/2;
     padding-top: 2em;
   }
-  .main-post-one-container {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .main-post-two-container {
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  .main-post-three-container {
-    grid-column: 1/2;
-    grid-row: 4/5;
-  }
   .post-readmore {
     grid-column: 1/2;
     grid-row: 5/6;
-  }
-  .post-item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-height: 372px;
-    overflow: hidden;
-  }
-  .main-post-one-pic {
-    grid-column: 1/2;
-  }
-  .post-one {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-rows: minmax(1rem, 7rem) minmax(1rem, 2.5rem);
-  }
-  .post-heading {
-    grid-row: 1/2;
-    margin-left: 1rem; /* for iOS -> 'gap' is not working */
-  }
-  .post-date {
-    grid-row: 2/3;
-    max-height: 3rem;
-    margin-left: 1rem; /* for iOS -> 'gap' is not working */
-  }
-  .post-heading a h3 {
-    padding-top: 1.5rem;
-    font-size: 1.4rem;
-  }
-  .post-date p {
-    font-size: 1rem;
   }
   /**--- 6. Adjustment other pages ---**/
   /*- About us page -*/
   .map_box iframe{
     height: 90vw;
+  }
+  /*- Contact page -*/
+  .entercs {
+    padding: 1rem 1.3rem;
+    min-height: 22rem;
+  }
+  .enter_bundle {
+    padding: 0.7rem 0; 
+  }
+  .bundle_tit {
+    width: 10%;
+  }
+  .bundle_input {
+    padding: 0 0 0 6rem;
+  }
+  .submit-cover {
+    right: 0;
+  }
+  /*- Blog page -*/
+  .flex-container {
+    padding: 2rem 2rem;
+  }
+  .flex-container .blog {
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+  .blog .img img {
+    max-width: 400px;
+  }
+  .blog .heading, .blog .date, .blog .content {
+    max-width: 400px;
+  }
+  /*- Menu page -*/
+  .menus-container {
+    flex-direction: column;
+  }
+  .menus-container .menus {
+    margin: 2%;
+    min-width: 0;
+    max-width: 90vw;
+    padding-bottom: 2.5rem;
+  }
+  .menu_img-box {
+    zoom: unset;
+    height: auto;
+    line-height: unset;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .menu_img-box img {
+    max-width: 700px;
   }
 }
 
@@ -1109,35 +1299,48 @@ img {
   .main-bg-cover .content {
     padding: 0 0.8em;
   }
-  /*- Index page : posting link section-*/
-  .post-heading a h3 {
-    padding-top: 0;
-    font-size: 1.3rem;
-  }
-  .post-bg-cover .content-container {
-    padding: 0.3rem;
-  }
-  .post-item {
-    display: flex;
-    flex-direction: column;
-    max-height: 470px;
-  }
-  .post-one {
-    display: flex;
-    flex-direction: column;
-  }
-  .post-heading {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    margin: 0.6rem 0;
-  }
   /*- Privacy policy page -*/
   .privacy-text .text-content-container {
     padding: 4rem 0.6rem;
     line-height: 1.5rem;
     font-size: 1rem;
   }
-  
+  /*- Contact page -*/
+  .entercs {
+    padding: 1rem 1rem;
+    min-height: 31rem;
+  }
+  .enter_bundle {
+    padding: 0.7rem 0; 
+  }
+  .bundle_tit {
+    display: block;
+    position: relative;
+  }
+  .bundle_input {
+    width: 100%;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  #submit {
+    right: 0;
+  }
+  /*- Blog page -*/
+  .flex-container {
+    padding: 2rem 0.5rem;
+  }
+  .blog .img img {
+    max-width: 370px;
+  }
+  .blog .heading, .blog .date, .blog .content {
+    max-width: 370px;
+  }
+  .blog .date {
+    padding: 1rem 0;
+  } 
+  .blog .date, .blog .content {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
 }
 

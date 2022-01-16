@@ -32,9 +32,9 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="menu.html">MENU</a></li>
-                    <li class="booking-box"><a href="#">BOOKING &amp; BUY</a></li>
+                    <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
                 </ul>
-                <!-- The hamburger  icon -->
+                <!-- The hamburger icon -->
                 <div class="icon menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -48,7 +48,7 @@
         <section>
             <div class="banner" role="img" aria-label="Main banner background">
                 <div class="slogan">
-                    <img src="img/banner_slogan.png" alt="The Haukai Restaurant - Tradirional Māori &amp; Modern Māori Fusion">
+                    <img src="img/banner_slogan.png" alt="The Haukai Restaurant - Tradirional Māori &amp; Modern Māori Fusion"> 
                 </div>
             </div>
         </section>
@@ -86,6 +86,10 @@
                         <div class="img-abouthaukai"></div>
                     </div>
                     <div class="main-wrapper">
+                        <div class="img-restaurant_1"></div>
+                        <div class="img-restaurant_2"></div>
+                    </div>
+                    <div class="main-wrapper">
                         <div class="img-location"></div>
                         <div id="text-location">
                             <div class="img-cover">
@@ -100,51 +104,63 @@
         <section class="bg-container">
             <div class="post-bg-cover">
                 <div class="content">
-                    <div class="content-container">
-                        <div class="section-head">
-                            <h2>BLOG</h2>
-                        </div>
-                        <article class="main-post-one-container">
-                            <div class="post-item">
-                                <div id="main-post-one-pic" onclick="location.href='blog.html';"></div>
-                                <div class="post-one">
-                                    <div class="post-heading">
-                                        <a href="#"><h3>Potato dishes from the central North Island</h3></a>
-                                    </div>
-                                    <div class="post-date">
-                                        <p>2021.12.30</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="main-post-two-container">
-                            <div class="post-item">
-                                <div id="main-post-two-pic" onclick="location.href='blog.html';"></div>
-                                <div class="post-two">
-                                    <div class="post-heading">
-                                        <a href="#"><h3>Fusion style using Bluff Oyster</h3></a>
-                                    </div>
-                                    <div class="post-date">
-                                        <p>2022.01.15</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="main-post-three-container">
-                            <div class="post-item">
-                                <div id="main-post-three-pic" onclick="location.href='blog.html';"></div>
-                                <div class="post-three">
-                                    <div class="post-heading">
-                                        <a href="#"><h3 lang="mi">The ingredients of Hāngi using heated rocks</h3></a>
-                                    </div>
-                                    <div class="post-date">
-                                        <p>2022.02.06</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <div class="post-readmore"><a href="#">Read More ></a></div>
+                    <div class="section-head">
+                        <h2>BLOG</h2>
                     </div>
+                    <div class="flex-container">
+                        <!-- main post 1 -->
+                        <div class="blog">
+                            <div class="items img">
+                                <img src="img/blog_1_400x400.jpg" alt="Blog - Potato dishes from the central North Island">
+                            </div>
+                            <div class="items heading">
+                                <h4>Potato dishes from the central North Island</h4>
+                            </div>
+                            <div class="items date">
+                                <span>2021.12.30</span>
+                            </div>
+                            <div class="items content">
+                                Lorem ipsum dolor sit amet, consec adiping elit,
+                                sed do eiuso tempor incdunt ut labre et dolore magna alqua.
+                                Semper feugia nibh sed pulvinar proin gravida. Vel orci porta non pulvinar neque laoreet suspendisse.
+                            </div>
+                        </div>
+                        <!-- main post 2 -->
+                        <div class="blog">
+                            <div class="items img">
+                                <img src="img/blog_2_400x400.jpg" alt="Blog - Fusion style using Bluff Oyster">
+                            </div>
+                            <div class="items heading">
+                                <h4>Fusion style using Bluff Oyster</h4>
+                            </div>
+                            <div class="items date">
+                                <span>2022.01.15</span>
+                            </div>
+                            <div class="items content">
+                                Lorem ipsum dolor sit amet, consec adiping elit,
+                                sed do eiuso tempor incdunt ut labre et dolore magna alqua.
+                                Semper feugia nibh sed pulvinar proin gravida. Vel orci porta non pulvinar neque laoreet suspendisse.
+                            </div>
+                        </div>
+                        <!-- main post 3 -->
+                        <div class="blog">
+                            <div class="items img">
+                                <img src="img/blog_3_400x400.jpg" alt="Blog - The ingredients of Hāngi using heated rocks">
+                            </div>
+                            <div class="items heading">
+                                <h4>The ingredients of Hāngi using heated rocks</h4>
+                            </div>
+                            <div class="items date">
+                                <span>2022.02.06</span>
+                            </div>
+                            <div class="items content">
+                                Lorem ipsum dolor sit amet, consec adiping elit,
+                                sed do eiuso tempor incdunt ut labre et dolore magna alqua.
+                                Semper feugia nibh sed pulvinar proin gravida. Vel orci porta non pulvinar neque laoreet suspendisse.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-readmore"><a href="blog.html">Read More ></a></div>
                 </div>
             </div>
         </section>
@@ -198,6 +214,7 @@
     <!-- End footer -->
 
     <script>
+        // sticky nav manu with the hamburger icon
         const body = document.querySelector("body");
         const navbar = document.querySelector(".navbar");
         const menuBtn = document.querySelector(".menu-btn");
@@ -216,6 +233,7 @@
             this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
         }
 
+        // footer: copyright auto generation
         let copyYear = "2021";
         let now = new Date;
         let curYear = now.getFullYear();

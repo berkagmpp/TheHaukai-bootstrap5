@@ -32,9 +32,9 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="menu.html">MENU</a></li>
-                    <li class="booking-box"><a href="#">BOOKING &amp; BUY</a></li>
+                    <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
                 </ul>
-                <!-- The hamburger  icon -->
+                <!-- The hamburger icon -->
                 <div class="icon menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -42,11 +42,14 @@
         </nav>
     </header>
     <!-- End Header -->
+    <!-- Main start -->
     <main>
+        <!-- top img banner section -->
         <section class="about_us_banner">
             <article class="inner-page-banner">
-                <img width="0" height="0" src="img/contact_900x475.jpg" alt="Contact - The Haukai restaurant"
-                    srcset="img/contact_411x217.jpg 411w, img/contact_900x475.jpg 900w, img/contact_2200x1162.jpg 1600w"
+                <!-- responsive img srcset for 415w, 900w, 1600w -->
+                <img src="img/contact_900x475.jpg" alt="Contact - The Haukai restaurant"
+                    srcset="img/contact_411x217.jpg 415w, img/contact_900x475.jpg 900w, img/contact_2200x1162.jpg 1600w"
                     sizes="(max-width: 414px) 414px, (max-width: 1599px) 900px, (min-width: 1600px) 1600px">
                 <div class="banner_text_container">
                     <div class="banner-box">
@@ -55,123 +58,73 @@
                 </div>
             </article>
         </section>
+        <!-- page sub menu section -->
         <section class="about-sub-menu">
             <div class="content">
                 <div class="sub-menu-container">
                     <ul class="sub-menu-list">
-                        <li><a href="#section-one">OUR STORY</a></li>
-                        <li><a href="#section-two">OWNER</a></li>
-                        <li><a href="#section-three">REVIEW</a></li>
-                        <li><a href="#section-four">OPENING HOURS</a></li>
-                        <li><a href="#section-five">LOCATION</a></li>
+                        <li><a href="#section-six">ENQUIRY</a></li>
+                        <li><a href="#section-one">ADDRESS</a></li>
                     </ul>
                 </div>
             </div>
         </section>
+        <!-- content section start -->
         <section class="bg-container">
             <div class="content">
+                <!-- enquiry section -->
+                <div id="section-six">
+                    <div class="split-box-four">
+                        <div class="bg-cover-100">
+                            <div class="heading-area">
+                                <h2>ENQUIRY</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="split-box-four">
+                        <div class="bg-cover-100-text">
+                            <form id="enquiryform" action="#" method="post">
+                                <div class="entercs">
+                                    <div class="enter_bundle">  
+                                        <div class="bundle_tit">
+                                            <label for="cus_name">Name:</label>
+                                        </div>
+                                        <div class="bundle_input">
+                                            <input type="text" id="cus_name" name="cus_name" required placeholder=" Plese enter your name"><br>
+                                        </div>
+                                    </div>
+                                    <div class="enter_bundle"> 
+                                        <div class="bundle_tit">
+                                            <label for="cus_email">Email:</label>
+                                        </div>
+                                        <div class="bundle_input">
+                                            <input type="text" id="cus_email" name="cus_email"required placeholder=" Plese enter your email adress"><br>
+                                        </div>
+                                    </div>
+                                    <div class="enter_bundle"> 
+                                        <div class="bundle_tit">
+                                            <label for="cus_content">Content:</label>
+                                        </div>
+                                        <div class="bundle_input">
+                                            <textarea rows="6" cols="60" id="cus_content" name="cus_content" required placeholder="Please fill out the details of your inquiry."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="enter_bundle">
+                                        <div class="submit-cover">
+                                            <input type="submit" id="submit" value="SUBMIT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- adress section -->
                 <div id="section-one">
                     <div class="split-box-one">
                         <div class="bg-cover-35">
                             <div class="heading-area">
-                                <h2>OUR STORY</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-two">
-                        <div class="bg-cover-65">
-                            <div class="text-area">
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Semper feugiat nibh sed pulvinar proin gravida. Vel orci porta non
-                                    pulvinar neque laoreet suspendisse.</p><br>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Semper feugiat nibh sed pulvinar proin.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="section-two">
-                    <div class="split-box-three">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>OWNER</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-two">
-                        <div class="bg-cover-65">
-                            <div class="text-area">
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    Tellus cras adipiscing enim eu turpis egestas. 
-                                    Amet mattis vulputate enim nulla aliquet. 
-                                    Augue eget arcu dictum varius duis at consectetur lorem donec. 
-                                    Lacus laoreet non curabitur gravida arcu ac tortor dignissim. 
-                                    Nec ullamcorper sit amet risus nullam eget felis eget nunc. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-one">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>OWNER</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="section-three">
-                    <div class="split-box-one">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>REVIEW</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-two">
-                        <div class="bg-cover-65">
-                            <div class="text-area">
-                                <h4>Facebook Reviews</h4>
-                                <p> 4.2 / 5.0<br><br>
-                                    Recent Reviews:<br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt.</p>
-                                <div class="post-readmore"><a href="#">Read More ></a></div>    
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div id="section-four">
-                    <div class="split-box-three">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>OPENING HOURS</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-two">
-                        <div class="bg-cover-65">
-                            <div class="text-area">
-                                <p>WEDNESDAY to SUNDAY : 17:00 - 23:00<br>
-                                    MONDAY & TUESDAY : Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-one">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>OPENING HOURS</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="section-five">
-                    <div class="split-box-one">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>LOCATION</h2>
+                                <h2>ADDRESS</h2>
                             </div>
                         </div>
                     </div>
@@ -191,8 +144,9 @@
                 </div>  
             </div>
         </section>
+        <!-- End content section -->
     </main>
-    <!-- End contents -->
+    <!-- End main -->
     <!-- Footer -->
     <footer>
         <div class="foot">
@@ -239,6 +193,7 @@
     <!-- End footer -->
 
     <script>
+        // sticky nav manu with the hamburger icon
         const body = document.querySelector("body");
         const navbar = document.querySelector(".navbar");
         const menuBtn = document.querySelector(".menu-btn");
@@ -257,12 +212,38 @@
             this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
         }
 
+        // footer: copyright auto generation
         let copyYear = "2021";
         let now = new Date;
         let curYear = now.getFullYear();
         let credit = document.getElementById("text-muted");
         if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ", HAUKAI All rights reserved";
         else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ", HAUKAI All rights reserved";
+
+        // contact page: submit button click
+        window.onload = function () {  // event run after entire page loading, including its content
+            document.getElementById("submit").addEventListener("click", function(event) {
+                event.preventDefault(); // prevent opening the URL
+                let name = document.getElementById("cus_name");
+                let email = document.getElementById("cus_email");
+                let content = document.getElementById("cus_content");
+                if (name == "" || email == "" || content == "") {
+                    alert("Please enter all boxes.");
+                    return false;
+                } else {
+                    if (confirm ("Are you sure to submit?\n\n Name: " + name.value
+                        + "\n Email: " + email.value + "\n Content: \n" + content.value) == true) {
+                            // below would be change for the backend integration
+                            name.value = "";
+                            email.value = "";
+                            content.value = "";
+                            alert("complete.");
+                    } else {
+                        return false;
+                    }
+                }
+            })
+        }
     </script>
 
 </body>

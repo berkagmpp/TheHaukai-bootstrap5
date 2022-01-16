@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><span lang="mi">HAUKAI RESTAURANT | Māori kai</span></title>
+    <title><span>Privacy Policy | HAUKAI RESTAURANT</span></title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
@@ -32,9 +32,9 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="menu.html">MENU</a></li>
-                    <li class="booking-box"><a href="#">BOOKING &amp; BUY</a></li>
+                    <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
                 </ul>
-                <!-- The hamburger  icon -->
+                <!-- The hamburger icon -->
                 <div class="icon menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -45,7 +45,7 @@
     <main>
         <section class="privacy_policy_banner">
             <article class="inner-page-banner">
-                <img width="0" height="0" src="img/privacy_900x475.jpg" 
+                <img src="img/privacy_900x475.jpg" 
                 alt="The Haukai restaurant privacy policy" 
                 srcset="img/privacy_411x217.jpg 411w, img/privacy_900x475.jpg 900w, img/privacy_2200x1162.jpg 1600w" 
                 sizes="(max-width: 414px) 414px, (max-width: 1599px) 900px, (min-width: 1600px) 1600px">
@@ -132,6 +132,7 @@
     <!-- End footer -->
 
     <script>
+        // sticky nav manu with the hamburger icon
         const body = document.querySelector("body");
         const navbar = document.querySelector(".navbar");
         const menuBtn = document.querySelector(".menu-btn");
@@ -150,6 +151,7 @@
             this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
         }
 
+        // footer: copyright auto generation
         let copyYear = "2021";
         let now = new Date;
         let curYear = now.getFullYear();

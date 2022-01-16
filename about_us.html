@@ -32,9 +32,9 @@
                     <li><a href="contact.html">CONTACT</a></li>
                     <li><a href="blog.html">BLOG</a></li>
                     <li><a href="menu.html">MENU</a></li>
-                    <li class="booking-box"><a href="#">BOOKING &amp; BUY</a></li>
+                    <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
                 </ul>
-                <!-- The hamburger  icon -->
+                <!-- The hamburger icon -->
                 <div class="icon menu-btn">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -42,11 +42,14 @@
         </nav>
     </header>
     <!-- End Header -->
+    <!-- Main start -->
     <main>
+        <!-- top img banner section -->
         <section class="about_us_banner">
             <article class="inner-page-banner">
-                <img width="0" height="0" src="img/about_900x475.jpg" alt="About us - The Haukai restaurant"
-                    srcset="img/about_411x217.jpg 411w, img/about_900x475.jpg 900w, img/about_2200x1162.jpg 1600w"
+                <!-- responsive img srcset for 415w, 900w, 1600w -->
+                <img src="img/about_900x475.jpg" alt="About us - The Haukai restaurant"
+                    srcset="img/about_411x217.jpg 415w, img/about_900x475.jpg 900w, img/about_2200x1162.jpg 1600w"
                     sizes="(max-width: 414px) 414px, (max-width: 1599px) 900px, (min-width: 1600px) 1600px">
                 <div class="banner_text_container">
                     <div class="banner-box">
@@ -55,6 +58,7 @@
                 </div>
             </article>
         </section>
+        <!-- page sub menu section -->
         <section class="about-sub-menu">
             <div class="content">
                 <div class="sub-menu-container">
@@ -68,8 +72,10 @@
                 </div>
             </div>
         </section>
+        <!-- content section start -->
         <section class="bg-container">
             <div class="content">
+                <!-- our story section -->
                 <div id="section-one">
                     <div class="split-box-one">
                         <div class="bg-cover-35">
@@ -92,6 +98,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- owner section -->
                 <div id="section-two">
                     <div class="split-box-three">
                         <div class="bg-cover-35">
@@ -121,6 +128,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- review section -->
                 <div id="section-three">
                     <div class="split-box-one">
                         <div class="bg-cover-35">
@@ -143,6 +151,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- opening hours section -->
                 <div id="section-four">
                     <div class="split-box-three">
                         <div class="bg-cover-35">
@@ -167,6 +176,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- location section -->
                 <div id="section-five">
                     <div class="split-box-one">
                         <div class="bg-cover-35">
@@ -191,8 +201,9 @@
                 </div>  
             </div>
         </section>
+        <!-- End content section -->
     </main>
-    <!-- End contents -->
+    <!-- End main -->
     <!-- Footer -->
     <footer>
         <div class="foot">
@@ -239,6 +250,7 @@
     <!-- End footer -->
 
     <script>
+        // sticky nav manu with the hamburger icon
         const body = document.querySelector("body");
         const navbar = document.querySelector(".navbar");
         const menuBtn = document.querySelector(".menu-btn");
@@ -257,6 +269,7 @@
             this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
         }
 
+        // footer: copyright auto generation
         let copyYear = "2021";
         let now = new Date;
         let curYear = now.getFullYear();
