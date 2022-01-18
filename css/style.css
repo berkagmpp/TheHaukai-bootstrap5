@@ -182,7 +182,7 @@ input, textarea {
 
 .sub-menu-container {
   margin: 3rem 0;
-  max-height: 370px;
+  max-height: 440px;
   background-color: #f5f5f5;
   padding: 1rem;
 }
@@ -366,6 +366,23 @@ input, textarea {
   line-height: 1.6rem;
   text-align: left;
 }
+.btn_book_area {
+  text-align: center;
+  width: 100%;
+}
+#btn_book {
+  display: inline-block;
+  margin: 4rem 0 6rem 0;
+  background-color: unset;
+  font-size: 1.3rem;
+  color: #ad743e;
+  padding: 1.5rem 2.5rem;
+  border: 2px solid #ad743e;
+}
+.whole-text .text-content-container {
+  padding: 4rem 2rem;
+  line-height: 2rem;
+}
 
 
 
@@ -424,7 +441,7 @@ input, textarea {
 
 .menu-list li a {
   color: #000;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -741,18 +758,36 @@ input, textarea {
 
 /**--- 6. Adjustment other pages ---**/
 
-/*- Privacy policy page -*/
-.privacy-text .text-content-container {
-  padding: 4rem 2rem;
-  line-height: 2rem;
-}
 /*- About us page -*/
-.map_box iframe{
+.map_box iframe {
   position: relative;
 	width: 100%;
   height: 35vh;
 	border: 0;
   margin-bottom: 4em;
+}
+.gc_box {
+  display: block;
+  /* position: fixed; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.gc-dialog {
+  display: block;
+  transform: translate(0,0);
+  position: relative;
+  width: auto;
+  margin: 1rem auto;
+  pointer-events: none;
+  padding: 0 1rem 1rem 1rem;
+  max-width: 950px;
+}
+.gc-dialog iframe {
+  min-height: 450px;
 }
 /*- Contact page -*/
 .entercs {
@@ -776,13 +811,11 @@ input, textarea {
   padding: 0 0 0 13rem;
   position: relative;
 }
-.submit-cover {
+#submit {
   position: absolute;
   right: 6rem;
   width: 100px;
   height: auto;
-}
-#submit {
   border: none;
   background-color: #787878;
   color: #fff;
@@ -824,7 +857,6 @@ input, textarea {
 .menu_img-box, .menu_img-box-two, .menu_img-box img, .menu_img-box-two img {
   max-width: 100%;
 }
-
 .menu_img-box {
   height: 566px;
   zoom: 1.2;
@@ -888,6 +920,78 @@ th h4 {
   align-items: flex-end;
   padding-bottom: 10%;
 }
+/*- Booking buy page -*/
+.text-area-2 {
+  padding: 0 3rem;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+#btn_acknow {
+  display: inline-block;
+  margin: 3rem 0;
+  background-color: unset;
+  font-size: 1.2rem;
+  color: #ad743e;
+  padding: 1.2rem 2rem;
+  border: 2px solid #ad743e;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-dialog {
+  display: block;
+  transform: translate(0,0);
+  max-width: 640px;
+  position: relative;
+  width: auto;
+  margin: 1rem auto;
+  pointer-events: none;
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+  border: 1px solid #888;
+}
+.close {
+  color: #787877;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1rem 2rem 0 0;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.iframe-form {
+  position: relative;
+}
+.iframe-form iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
 
 
 
@@ -916,6 +1020,10 @@ th h4 {
     font-size: 1.4rem;
     line-height: 2.2rem;
   }
+  .whole-text .text-content-container {
+    padding: 4rem 2rem;
+    line-height: 3rem;
+  }
   /*- Header -*/
   .navbar .logo a {
     font-size: 32px;
@@ -925,7 +1033,7 @@ th h4 {
     font-size: 20px;
   }
   .menu-list li a {
-    font-size: 22px;
+    font-size: 1.3rem;
     margin-left: 30px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -956,11 +1064,6 @@ th h4 {
   }
   .post-readmore a {
     font-size: 1.4rem;
-  }
-  /*- Privacy policy page -*/
-  .privacy-text .text-content-container {
-    padding: 4rem 2rem;
-    line-height: 3rem;
   }
   /*- Contact page -*/
   .bundle_tit {
@@ -1068,15 +1171,16 @@ th h4 {
     left: 0%;
   }
   .navbar .menu-list li {
-    margin-top: 45px;
+    margin-top: 9vh;
+    margin-left: 0;
   }
   .navbar .menu-list li a {
-    font-size: 23px;
+    font-size: 1.3rem;
     margin-left: -100%;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   .navbar.show .menu-list li a {
-    margin-left: 0px;
+    margin-left: 0;
   }
   /*- Footer -*/
   .foot .content-container {
@@ -1168,7 +1272,7 @@ th h4 {
   .bundle_input {
     padding: 0 0 0 6rem;
   }
-  .submit-cover {
+  #submit {
     right: 0;
   }
   /*- Blog page -*/
@@ -1205,6 +1309,10 @@ th h4 {
   }
   .menu_img-box img {
     max-width: 700px;
+  }
+  /*- Booking buy page -*/
+  .text-area-2 {
+    padding: 0 3rem;
   }
 }
 
@@ -1254,6 +1362,11 @@ th h4 {
   .text-area {
     padding: 0.6rem;
   }
+  .whole-text .text-content-container {
+    padding: 4rem 0.6rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
   /*- Header -*/
   .navbar, .navbar.sticky  {
     padding: 0;
@@ -1266,7 +1379,7 @@ th h4 {
     font-size: 15px;
   }
   .navbar .menu-list li {
-    margin: 13% 0;
+    margin-top: 6.5vh;
   }
   /*- Footer -*/
   .foot .content-container {
@@ -1298,12 +1411,6 @@ th h4 {
   }
   .main-bg-cover .content {
     padding: 0 0.8em;
-  }
-  /*- Privacy policy page -*/
-  .privacy-text .text-content-container {
-    padding: 4rem 0.6rem;
-    line-height: 1.5rem;
-    font-size: 1rem;
   }
   /*- Contact page -*/
   .entercs {

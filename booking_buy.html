@@ -17,9 +17,14 @@
         <nav class="navbar">
             <div class="content">
                 <!-- Top Logo -->
-                <div class="logo"><a href="index.html">HAUKAI
-                        <div class="letter"> RESTAURANT</div>
-                    </a></div>
+                <div class="logo" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
+                    <a href="index.html">
+                            HAUKAI
+                        <div class="letter" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
+                            RESTAURANT
+                        </div>
+                    </a>
+                </div>
                 <!-- Top menu navigation -->
                 <ul class="menu-list">
                     <!-- The x icon -->
@@ -42,7 +47,8 @@
         </nav>
     </header>
     <!-- End Header -->
-    <!-- Main start -->
+
+    <!-- Main -->
     <main>
         <!-- top img banner section -->
         <section class="about_us_banner">
@@ -59,94 +65,41 @@
             </article>
         </section>
         <!-- page sub menu section -->
-        <section class="about-sub-menu">
+        <section class="whole-text">
             <div class="content">
-                <div class="sub-menu-container">
-                    <ul class="sub-menu-list">
-                        <li><a href="#section-six">ENQUIRY</a></li>
-                        <li><a href="#section-one">ADDRESS</a></li>
-                    </ul>
+                <div class="text-content-container">
+                    <div class="text-area-2">
+                        <p>Dear Guest.<br><br>
+                            The directive of the New Zealand government is that hospitality 
+                            venues are required to ensure that all guests aged 12 and over are 
+                            <strong>double vaccinated </strong>for bookings from 03/12/21 until further notice.</p>
+                        <p>Please indicate below that you acknowledge this directive before proceeding to 
+                            book. Proof of vaccination will be required until New Zealand Health mandates that 
+                            hospitality venues may welcome unvaccinated guests.</p>
+                        <!-- button for opening the modal -->
+                        <div class="btn_book_area">
+                            <button id="btn_acknow">I ACKNOWLEDGE</button>
+                        </div>
+                    </div>
+
+                </div>    
+            </div>
+            <!-- modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="close">&times;</div>
+                        <div class= "iframe-form">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSci4dXFoLO9jb2-HN1GLrOw9uhUBbQ-1tlnNEvXlKVBbP6eeg/viewform?embedded=true" 
+                            scrolling="no" width="640" height="1440" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- content section start -->
-        <section class="bg-container">
-            <div class="content">
-                <!-- enquiry section -->
-                <div id="section-six">
-                    <div class="split-box-four">
-                        <div class="bg-cover-100">
-                            <div class="heading-area">
-                                <h2>ENQUIRY</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-four">
-                        <div class="bg-cover-100-text">
-                            <form id="enquiryform" action="#" method="post">
-                                <div class="entercs">
-                                    <div class="enter_bundle">  
-                                        <div class="bundle_tit">
-                                            <label for="cus_name">Name:</label>
-                                        </div>
-                                        <div class="bundle_input">
-                                            <input type="text" id="cus_name" name="cus_name" required placeholder=" Plese enter your name"><br>
-                                        </div>
-                                    </div>
-                                    <div class="enter_bundle"> 
-                                        <div class="bundle_tit">
-                                            <label for="cus_email">Email:</label>
-                                        </div>
-                                        <div class="bundle_input">
-                                            <input type="text" id="cus_email" name="cus_email"required placeholder=" Plese enter your email adress"><br>
-                                        </div>
-                                    </div>
-                                    <div class="enter_bundle"> 
-                                        <div class="bundle_tit">
-                                            <label for="cus_content">Content:</label>
-                                        </div>
-                                        <div class="bundle_input">
-                                            <textarea rows="6" cols="60" id="cus_content" name="cus_content" required placeholder="Please fill out the details of your inquiry."></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="enter_bundle">
-                                        <div class="submit-cover">
-                                            <input type="submit" id="submit" value="SUBMIT">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- adress section -->
-                <div id="section-one">
-                    <div class="split-box-one">
-                        <div class="bg-cover-35">
-                            <div class="heading-area">
-                                <h2>ADDRESS</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="split-box-two">
-                        <div class="bg-cover-65">
-                            <div class="text-area">
-                                <div class="con-phone">
-                                    <p>Tel: 09 401 4019</p>
-                                </div>
-                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="map_box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11615.282571345257!2d174.00238844449052!3d-35.22069815766716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb73e31b0728b%3A0x500ef6143a2d500!2sKerikeri!5e0!3m2!1sen!2snz!4v1642044788042!5m2!1sen!2snz" allowfullscreen="" loading="lazy"></iframe>
-                </div>  
-            </div>
-        </section>
-        <!-- End content section -->
     </main>
     <!-- End main -->
+    
     <!-- Footer -->
     <footer>
         <div class="foot">
@@ -155,11 +108,11 @@
                     <!-- sns icons -->
                     <div class="footicon">
                         <div class="icon-container">
-                            <img src="img/icon_facebook.png" alt="facebook_icon">
-                            <img src="img/icon_insta.png" alt="instagram_icon">
-                            <img src="img/icon_google.png" alt="google_icon">
-                            <img src="img/icon_youtube.png" alt="youtube_icon">
-                            <img src="img/icon_pinter.png" alt="pinterest_icon" >
+                            <img src="img/icon_facebook.png" alt="Facebook icon">
+                            <img src="img/icon_insta.png" alt="Instagram icon">
+                            <img src="img/icon_google.png" alt="Google icon">
+                            <img src="img/icon_youtube.png" alt="Youtube icon">
+                            <img src="img/icon_pinter.png" alt="Pinterest icon">
                         </div>
                         <div class="foot-opentext">
                             <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
@@ -220,30 +173,23 @@
         if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ", HAUKAI All rights reserved";
         else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ", HAUKAI All rights reserved";
 
-        // contact page: submit button click
-        window.onload = function () {  // event run after entire page loading, including its content
-            document.getElementById("submit").addEventListener("click", function(event) {
-                event.preventDefault(); // prevent opening the URL
-                let name = document.getElementById("cus_name");
-                let email = document.getElementById("cus_email");
-                let content = document.getElementById("cus_content");
-                if (name == "" || email == "" || content == "") {
-                    alert("Please enter all boxes.");
-                    return false;
-                } else {
-                    if (confirm ("Are you sure to submit?\n\n Name: " + name.value
-                        + "\n Email: " + email.value + "\n Content: \n" + content.value) == true) {
-                            // below would be change for the backend integration
-                            name.value = "";
-                            email.value = "";
-                            content.value = "";
-                            alert("complete.");
-                    } else {
-                        return false;
-                    }
-                }
-            })
+        // booking buy page: I ACKNOWLEDGE button click
+        let modal = document.getElementById("myModal");
+        let btn = document.getElementById("btn_acknow");
+        let close = document.getElementsByClassName("close")[0];
+        btn.onclick = () => {
+        modal.style.display = "block";
+
         }
+        close.onclick = () => {
+        modal.style.display = "none";
+        }
+        window.onclick = (event)  => {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+
     </script>
 
 </body>

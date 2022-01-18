@@ -17,9 +17,14 @@
         <nav class="navbar">
             <div class="content">
                 <!-- Top Logo -->
-                <div class="logo"><a href="index.html">HAUKAI
-                        <div class="letter"> RESTAURANT</div>
-                    </a></div>
+                <div class="logo" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
+                    <a href="index.html">
+                            HAUKAI
+                        <div class="letter" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
+                            RESTAURANT
+                        </div>
+                    </a>
+                </div>
                 <!-- Top menu navigation -->
                 <ul class="menu-list">
                     <!-- The x icon -->
@@ -42,7 +47,8 @@
         </nav>
     </header>
     <!-- End Header -->
-    <!-- Main start -->
+
+    <!-- Main -->
     <main>
         <!-- top img banner section -->
         <section class="about_us_banner">
@@ -83,7 +89,7 @@
                     </div>
                     <div class="split-box-four">
                         <div class="bg-cover-100-text">
-                            <form id="enquiryform" action="#" method="post">
+                            <form id="enquiryform" action="#" method="post" aria-label="Submit enquiry">
                                 <div class="entercs">
                                     <div class="enter_bundle">  
                                         <div class="bundle_tit">
@@ -110,9 +116,7 @@
                                         </div>
                                     </div>
                                     <div class="enter_bundle">
-                                        <div class="submit-cover">
-                                            <input type="submit" id="submit" value="SUBMIT">
-                                        </div>
+                                        <input type="submit" id="submit" value="SUBMIT">
                                     </div>
                                 </div>
                             </form>
@@ -147,6 +151,7 @@
         <!-- End content section -->
     </main>
     <!-- End main -->
+    
     <!-- Footer -->
     <footer>
         <div class="foot">
@@ -155,11 +160,11 @@
                     <!-- sns icons -->
                     <div class="footicon">
                         <div class="icon-container">
-                            <img src="img/icon_facebook.png" alt="facebook_icon">
-                            <img src="img/icon_insta.png" alt="instagram_icon">
-                            <img src="img/icon_google.png" alt="google_icon">
-                            <img src="img/icon_youtube.png" alt="youtube_icon">
-                            <img src="img/icon_pinter.png" alt="pinterest_icon" >
+                            <img src="img/icon_facebook.png" alt="Facebook icon">
+                            <img src="img/icon_insta.png" alt="Instagram icon">
+                            <img src="img/icon_google.png" alt="Google icon">
+                            <img src="img/icon_youtube.png" alt="Youtube icon">
+                            <img src="img/icon_pinter.png" alt="Pinterest icon">
                         </div>
                         <div class="foot-opentext">
                             <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
@@ -227,7 +232,7 @@
                 let name = document.getElementById("cus_name");
                 let email = document.getElementById("cus_email");
                 let content = document.getElementById("cus_content");
-                if (name == "" || email == "" || content == "") {
+                if (name.value == "" || email.value == "" || content.value == "") {
                     alert("Please enter all boxes.");
                     return false;
                 } else {
