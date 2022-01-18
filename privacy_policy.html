@@ -50,20 +50,22 @@
 
     <!-- Main -->
     <main>
-        <section class="privacy_policy_banner">
-            <article class="inner-page-banner">
-                <img src="img/privacy_900x475.jpg" 
-                alt="The Haukai restaurant privacy policy" 
-                srcset="img/privacy_411x217.jpg 411w, img/privacy_900x475.jpg 900w, img/privacy_2200x1162.jpg 1600w" 
-                sizes="(max-width: 414px) 414px, (max-width: 1599px) 900px, (min-width: 1600px) 1600px">
+        <!-- top img banner -->
+        <div class="about_us_banner" role="banner" aria-label="The top page banner">
+            <div class="inner-page-banner">
+                <!-- responsive img srcset for 415w, 900w, 1600w -->
+                <img src="img/privacy_900x475.jpg" alt="Privacy policy background: A man indicates the lock mark"
+                    srcset="img/privacy_411x217.jpg 415w, img/privacy_900x475.jpg 900w, img/privacy_2200x1162.jpg 1600w"
+                    sizes="(max-width: 414px) 414px, (max-width: 1599px) 900px, (min-width: 1600px) 1600px">
                 <div class="banner_text_container">
                     <div class="banner-box">
                         <h1>PRIVACY POLICY</h1>
                     </div>
                 </div>
-            </article>
-        </section>
-        <section class="whole-text">
+            </div>
+        </div>
+        <!-- content -->
+        <section class="whole-text" role="contentinfo" aria-label="Privacy policy">
             <div class="content">
                 <div class="text-content-container">
                     <p>
@@ -100,7 +102,7 @@
             <div class="content">
                 <div class="content-container">
                     <!-- sns icons -->
-                    <div class="footicon">
+                    <div class="footicon" role="img" aria-label="SNS icons">
                         <div class="icon-container">
                             <img src="img/icon_facebook.png" alt="Facebook icon">
                             <img src="img/icon_insta.png" alt="Instagram icon">
@@ -108,12 +110,12 @@
                             <img src="img/icon_youtube.png" alt="Youtube icon">
                             <img src="img/icon_pinter.png" alt="Pinterest icon">
                         </div>
-                        <div class="foot-opentext">
+                        <div class="foot-opentext" aria-label="Hours information">
                             <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
                         </div>
                     </div>
                     <!-- footer-nav -->
-                    <div class="footnav">
+                    <div class="footnav" role="navigation" aria-label="Footer navigation">
                         <ul class="menu-list">
                             <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
                             <li><a href="#">TERMS &amp; CONDITIONS</a></li>
@@ -122,7 +124,7 @@
                         </ul>
                     </div>
                     <!-- footer-contact -->
-                    <div class="footcontact">
+                    <div class="footcontact" aria-label="Contanct information">
                             <div class="con-phone">
                                 <p>09 401 4019</p>
                             </div>
@@ -130,7 +132,7 @@
                                 <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
                             </div>
                     </div>
-                    <div class="footcredit">
+                    <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
                         <p id="text-muted"></p>
                     </div>
                 </div>        

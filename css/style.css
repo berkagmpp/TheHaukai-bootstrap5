@@ -131,7 +131,8 @@ input, textarea {
 }
 
 .bg-container {
-  background: url("../img/banner.jpg") no-repeat fixed center;
+  background: url("../img/banner.jpg") no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
 }
@@ -595,7 +596,8 @@ input, textarea {
 
 /*- 5. Index page : main banner -*/
 .banner {
-  background: url("../img/banner.jpg") no-repeat fixed center;
+  background: url("../img/banner.jpg") no-repeat center;
+  background-attachment: fixed;
   height: 95vh;
   background-size: cover;
 }
@@ -1041,6 +1043,7 @@ th h4 {
   /*- Index page : main banner -*/
   .banner {
     background: url("../img/l-banner_2200x1117.jpg") no-repeat center;
+    background-attachment: fixed;
     height: 94vh;
     background-size: cover;
   }
