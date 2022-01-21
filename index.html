@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title lang="mi">HAUKAI RESTAURANT | Māori kai</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,10 +16,10 @@
         <nav class="navbar">
             <div class="content">
                 <!-- Top Logo -->
-                <div class="logo" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
+                <div class="logo" role="link" aria-label="Logo-HAUKAI">
                     <a href="index.html">
                             HAUKAI
-                        <div class="letter" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
+                        <div class="letter" role="link" aria-label="Logo-RESTAURANT">
                             RESTAURANT
                         </div>
                     </a>
@@ -29,7 +28,7 @@
                 <ul class="menu-list">
                     <!-- The x icon -->
                     <li class="icon cancel-btn">
-                        <i class="fas fa-times"></i>
+                        <input type="image" src="img/times.png" alt="Cancel button">
                     </li>
                     <!-- The nav list -->
                     <li><a href="index.html">HOME</a></li>
@@ -41,7 +40,7 @@
                 </ul>
                 <!-- The hamburger icon -->
                 <div class="icon menu-btn">
-                    <i class="fas fa-bars"></i>
+                    <input type="image" src="img/bars.png" alt="Hamburger button">
                 </div>
             </div>
         </nav>
@@ -210,42 +209,14 @@
                             </div>
                     </div>
                     <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
-                        <p id="text-muted"></p>
+                        <span id="text-muted" aria-label="Copyright information"></span>
+                        <span>&nbsp;All Rights Reserved.</span>
                     </div>
                 </div>        
             </div>
         </div>
     </footer>
     <!-- End footer -->
-
-    <script>
-        // sticky nav manu with the hamburger icon
-        const body = document.querySelector("body");
-        const navbar = document.querySelector(".navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = () => {
-            navbar.classList.add("show");
-            menuBtn.classList.add("hide");
-            body.classList.add("disabled");
-        }
-        cancelBtn.onclick = () => {
-            body.classList.remove("disabled");
-            navbar.classList.remove("show");
-            menuBtn.classList.remove("hide");
-        }
-        window.onscroll = () => {
-            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        }
-
-        // footer: copyright auto generation
-        let copyYear = "2021";
-        let now = new Date;
-        let curYear = now.getFullYear();
-        let credit = document.getElementById("text-muted");
-        if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ",";
-        else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ",";
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

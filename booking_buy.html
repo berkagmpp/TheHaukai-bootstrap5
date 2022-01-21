@@ -6,57 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking &amp; BUY | HAUKAI RESTAURANT</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <!-- Top navbar -->
-        <nav class="navbar">
-            <div class="content">
-                <!-- Top Logo -->
-                <div class="logo" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
-                    <a href="index.html">
-                            HAUKAI
-                        <div class="letter" role="link" aria-labelledby="HAUKAI RESTAURANT logo">
-                            RESTAURANT
-                        </div>
-                    </a>
-                </div>
-                <!-- Top menu navigation -->
-                <ul class="menu-list">
-                    <!-- The x icon -->
-                    <li class="icon cancel-btn">
-                        <i class="fas fa-times"></i>
-                    </li>
-                    <!-- The nav list -->
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about_us.html">ABOUT US</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="menu.html">MENU</a></li>
-                    <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
-                </ul>
-                <!-- The hamburger icon -->
-                <div class="icon menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+<!-- Header -->
+<header>
+    <!-- Top navbar -->
+    <nav class="navbar">
+        <div class="content">
+            <!-- Top Logo -->
+            <div class="logo" role="link" aria-label="Logo-HAUKAI">
+                <a href="index.html">
+                        HAUKAI
+                    <div class="letter" role="link" aria-label="Logo-RESTAURANT">
+                        RESTAURANT
+                    </div>
+                </a>
             </div>
-        </nav>
-    </header>
-    <!-- End Header -->
+            <!-- Top menu navigation -->
+            <ul class="menu-list">
+                <!-- The x icon -->
+                <li class="icon cancel-btn">
+                    <input type="image" src="img/times.png" alt="Cancel button">
+                </li>
+                <!-- The nav list -->
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li class="booking-box"><a href="booking_buy.html">BOOKING &amp; BUY</a></li>
+            </ul>
+            <!-- The hamburger icon -->
+            <div class="icon menu-btn">
+                <input type="image" src="img/bars.png" alt="Hamburger button">
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Header -->
 
     <!-- Main -->
     <main>
         <!-- top img banner -->
         <div class="about_us_banner" role="banner" aria-label="The top page banner">
             <div class="inner-page-banner">
-                <!-- responsive img srcset for 415w, 900w, 1600w -->
-                <img src="img/booking_900x475.jpg" alt="Booking &amp background: White trees in snow"
-                    srcset="img/booking_411x217.jpg 415w, img/booking_900x475.jpg 900w, img/booking_2200x1162.jpg 1600w"
-                    sizes="(max-width: 414px) 414px, (max-width: 1599px) 900px, (min-width: 1600px) 1600px">
+                <!-- responsive picture srcset for 415w, 900w, 1600w -->
+                <picture>
+                    <source media="(min-width: 1600px)" srcset="img/booking_2200x1162.jpg">
+                    <source media="(min-width: 415px)" srcset="img/booking_900x475.jpg">
+                    <source media="(max-width: 414px)" srcset="img/booking_411x217.jpg">
+                    <img src="img/booking_411x217.jpg" alt="Booking &amp background: White trees in snow">
+                </picture>
                 <div class="banner_text_container">
                     <div class="banner-box">
                         <h1>BOOKING &amp; BUY</h1>
@@ -139,60 +141,14 @@
                             </div>
                     </div>
                     <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
-                        <p id="text-muted"></p>
+                        <span id="text-muted" aria-label="Copyright information"></span>
+                        <span>&nbsp;All Rights Reserved.</span>
                     </div>
                 </div>        
             </div>
         </div>
     </footer>
     <!-- End footer -->
-
-    <script>
-        // sticky nav manu with the hamburger icon
-        const body = document.querySelector("body");
-        const navbar = document.querySelector(".navbar");
-        const menuBtn = document.querySelector(".menu-btn");
-        const cancelBtn = document.querySelector(".cancel-btn");
-        menuBtn.onclick = () => {
-            navbar.classList.add("show");
-            menuBtn.classList.add("hide");
-            body.classList.add("disabled");
-        }
-        cancelBtn.onclick = () => {
-            body.classList.remove("disabled");
-            navbar.classList.remove("show");
-            menuBtn.classList.remove("hide");
-        }
-        window.onscroll = () => {
-            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-        }
-
-        // footer: copyright auto generation
-        let copyYear = "2021";
-        let now = new Date;
-        let curYear = now.getFullYear();
-        let credit = document.getElementById("text-muted");
-        if (copyYear == curYear) credit.innerHTML = "Copyright " + copyYear + ", HAUKAI All rights reserved";
-        else credit.innerHTML ="Copyright " + copyYear + "-" + curYear + ", HAUKAI All rights reserved";
-
-        // booking buy page: I ACKNOWLEDGE button click
-        let modal = document.getElementById("myModal");
-        let btn = document.getElementById("btn_acknow");
-        let close = document.getElementsByClassName("close")[0];
-        btn.onclick = () => {
-        modal.style.display = "block";
-
-        }
-        close.onclick = () => {
-        modal.style.display = "none";
-        }
-        window.onclick = (event)  => {
-            if (event.target == modal) {
-            modal.style.display = "none";
-            }
-        }
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
