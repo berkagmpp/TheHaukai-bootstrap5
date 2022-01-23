@@ -473,12 +473,6 @@ input, textarea {
   margin-left: 1.5rem;
 }
 
-.menu-list li i {
-  list-style: none;
-  position: fixed;
-  top: 3%;
-}
-
 .menu-list li a {
   color: #000;
   font-size: 1.2rem;
@@ -526,22 +520,27 @@ input, textarea {
 
 /**--- 4. Footer ---**/
 
-.foot {
+footer {
   background: #004368;
 }
 
-.foot h4 {
+footer h4 {
   text-align: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.1rem;
+  padding-bottom: 0.5rem;
 }
 
-.foot .content-container {
+footer .content-container {
   grid-template-rows: 1fr auto;
   padding-top: 3rem;
 }
 
-.footicon {
+.weather-widget {
   grid-area: 1/1/2/2;
-  display: inline;
+  display: block;
+  padding: 0 0 3rem 0;
 }
 
 .footnav {
@@ -569,30 +568,6 @@ input, textarea {
   text-align: center;
 }
 
-.icon-container {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 2rem;
-}
-
-.foot-opentext p {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 300;
-  text-align: center;
-  line-height: 2.3em;
-  padding-top: 1rem;
-}
-
-.foot-opentext h4 {
-  font-weight: 700;
-  color: #fff;
-  font-size: 1.1rem;
-}
-
 .footnav .menu-list li {
   list-style: none;
   text-decoration: underline;
@@ -606,7 +581,7 @@ input, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1.9rem;
+  padding-bottom: 2.2rem;
 }
 
 .footnav .menu-list a:visited {
@@ -627,7 +602,7 @@ input, textarea {
 
 .footcontact .con-address p {
   color: #fff;
-  line-height: 2.5em;
+  line-height: 3em;
   text-align: center;
 }
 
@@ -1227,13 +1202,13 @@ th h4 {
     margin-left: 0;
   }
   /*- Footer -*/
-  .foot .content-container {
+  footer .content-container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr), 4rem;
     padding-top: 30px;
     grid-gap: 0;
   }
-  .footicon {
+  .weather-widget {
     grid-area: 1/1/2/2;
     margin: 1rem auto;
   }
@@ -1249,8 +1224,8 @@ th h4 {
     margin-left: auto;
     margin-right: auto;
   }
-  .foot-opentext {
-    padding: 1rem 0 3rem 0;
+  .foot-widgettext {
+    padding: 1rem 0;
   }
   .footcontact .con-box {
     max-width: 300px;
@@ -1430,7 +1405,7 @@ th h4 {
     top: -2%;
   }
   /*- Footer -*/
-  .foot .content-container {
+  footer .content-container {
     padding: 0;
   }
   .footcredit {

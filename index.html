@@ -174,46 +174,39 @@
 
     <!-- Footer -->
     <footer>
-        <div class="foot">
-            <div class="content">
-                <div class="content-container">
-                    <!-- sns icons -->
-                    <div class="footicon" role="img" aria-label="SNS icons">
-                        <div class="icon-container">
-                            <img src="img/icon_facebook.png" alt="Facebook icon">
-                            <img src="img/icon_insta.png" alt="Instagram icon">
-                            <img src="img/icon_google.png" alt="Google icon">
-                            <img src="img/icon_youtube.png" alt="Youtube icon">
-                            <img src="img/icon_pinter.png" alt="Pinterest icon">
+        <div class="content">
+            <div class="content-container">
+                <!-- weather forecast widget -->
+                <div class="weather-widget" role="img" aria-label="SNS icons">
+                    <div class="foot-widgettext" aria-label="weather forecast">
+                        <h4>WEATHER INFO</h4>
+                    </div>
+                        <iframe id="widget-iframe" width="300px" height="167px"
+                                src="https://services.metservice.com/weather-widget/widget?params=white|small|portrait|days-3|classic&loc=auckland&type=urban"></iframe>
+                </div>
+                <!-- footer-nav -->
+                <div class="footnav" role="navigation" aria-label="Footer navigation">
+                    <ul class="menu-list">
+                        <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
+                        <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+                        <li><a href="contact.html">CONTACT &amp; HELP</a></li>
+                        <li><a href="#">FOR EMPLOYEES</a></li>
+                    </ul>
+                </div>
+                <!-- footer-contact -->
+                <div class="footcontact" aria-label="Contanct information">
+                        <div class="con-phone">
+                            <p>09 401 4019</p>
                         </div>
-                        <div class="foot-opentext" aria-label="Hours information">
-                            <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
+                        <div class="con-address">
+                            <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
                         </div>
-                    </div>
-                    <!-- footer-nav -->
-                    <div class="footnav" role="navigation" aria-label="Footer navigation">
-                        <ul class="menu-list">
-                            <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
-                            <li><a href="#">TERMS &amp; CONDITIONS</a></li>
-                            <li><a href="contact.html">CONTACT &amp; HELP</a></li>
-                            <li><a href="#">FOR EMPLOYEES</a></li>
-                        </ul>
-                    </div>
-                    <!-- footer-contact -->
-                    <div class="footcontact" aria-label="Contanct information">
-                            <div class="con-phone">
-                                <p>09 401 4019</p>
-                            </div>
-                            <div class="con-address">
-                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
-                            </div>
-                    </div>
-                    <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
-                        <span id="text-muted" aria-label="Copyright information"></span>
-                        <span>&nbsp;All Rights Reserved.</span>
-                    </div>
-                </div>        
-            </div>
+                </div>
+                <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
+                    <span id="text-muted" aria-label="Copyright information"></span>
+                    <span>&nbsp;All Rights Reserved.</span>
+                </div>
+            </div>        
         </div>
     </footer>
     <!-- End footer -->
