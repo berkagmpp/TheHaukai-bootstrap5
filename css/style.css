@@ -247,13 +247,13 @@ input, textarea {
   color: #000;
 }
 
-#section-one, #section-two, #section-three, #section-four, #section-five, #section-six, #section-seven {
+#section-one, #section-two, #section-three, #section-four, #section-five, #section-six, #section-seven #section-eight {
   display: flex;
   justify-content: space-between;
   margin-bottom: 4rem;
 }
 
-#section-five, #section-seven {
+#section-five, #section-seven #section-eight {
   margin-bottom: 0;
 }
 
@@ -373,11 +373,13 @@ input, textarea {
   max-width: 100%;
   height: auto;
 }
+
 .blog .img img {
   max-width: 400px;
   width: 100%;
   height: auto;
 }
+
 .blog .heading, .blog .content {
   padding: 0;
   overflow: hidden;
@@ -387,38 +389,48 @@ input, textarea {
   -webkit-line-clamp: 3 ;
   -webkit-box-orient: vertical;
 }
+
 .blog .heading {
   margin-top: 1rem;
   line-height: 1.8rem;
 }
+
 .blog .heading h4 {
   font-size: 1.5rem;
   text-align: center;
 }
+
 .blog .date {
   flex: 1;
   text-align: end;
   padding: 0.5rem;
 }
+
 .blog .content {
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 1.6rem;
   text-align: left;
 }
+
 .btn_book_area {
   text-align: center;
   width: 100%;
 }
-#btn_book {
+
+.btn_book {
   display: inline-block;
-  margin: 4rem 0 6rem 0;
+  margin: 4rem 0 2rem 0;
   background-color: unset;
   font-size: 1.3rem;
   color: #ad743e;
   padding: 1.5rem 2.5rem;
   border: 2px solid #ad743e;
 }
+.mb-6rem {
+  margin-bottom: 6rem;
+}
+
 .whole-text .text-content-container {
   padding: 4rem 2rem;
   line-height: 2rem;
@@ -524,12 +536,19 @@ footer {
   background: #004368;
 }
 
-footer h4 {
+footer p, footer h4 {
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  line-height: 1.6rem;
+}
+
+footer h4 {
+  font-weight: 700;
   font-size: 1.1rem;
-  padding-bottom: 0.5rem;
+  padding-top: 2rem;
 }
 
 footer .content-container {
@@ -537,14 +556,18 @@ footer .content-container {
   padding-top: 3rem;
 }
 
-.weather-widget {
+.footicon {
   grid-area: 1/1/2/2;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0 0 3rem 0;
+  height: 100%;
+  max-width: 400px;
 }
 
 .footnav {
   grid-area: 1/2/2/3;
+  padding-top: 1rem;
 } 
 
 .footcontact {
@@ -553,6 +576,7 @@ footer .content-container {
   font-weight: 300;
   color: #fff;
   height: 100%;
+  padding-top: 1rem;
 }
 
 .footcredit {
@@ -566,6 +590,18 @@ footer .content-container {
   font-size: 0.9rem;
   font-weight: 300;
   text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 260px;
+}
+
+.icon-container img {
+  margin: 1rem;
+  width: 35px;
+  height: 35px;
 }
 
 .footnav .menu-list li {
@@ -598,9 +634,6 @@ footer .content-container {
   display: flex; 
   justify-content: center; 
   align-items: center;
-}
-
-.footcontact .con-address p {
   color: #fff;
   line-height: 3em;
   text-align: center;
@@ -982,24 +1015,21 @@ th h4 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
   border-radius: 0.3rem;
   border: 1px solid #888;
 }
-.close {
-  color: #787877;
+.modal-header {
   display: flex;
+  flex-shrink: 0;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
   justify-content: flex-end;
-  font-size: 32px;
-  font-weight: bold;
-  padding: 1rem 2rem 0 0;
-}
-.close:hover, .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 .iframe-form {
   position: relative;
@@ -1008,8 +1038,12 @@ th h4 {
   max-width: 100%;
   max-height: 100%;
 }
-
-
+.btn-x {
+  width: 1.7em;
+  height: 1.7em;
+  padding: 0.25em 0.25em;
+  border: none;
+}
 
 
 
@@ -1072,6 +1106,7 @@ th h4 {
   }
   .text-content-container p {
     font-size: 1.4rem;
+    line-height: 2.3rem;
   }
   /*- Index page : content link section -*/
   .img-cover h4 {
@@ -1205,7 +1240,10 @@ th h4 {
     padding-top: 30px;
     grid-gap: 0;
   }
-  .weather-widget {
+  footer p, footer h4 {
+    line-height: 3rem;
+  }
+  .footicon {
     grid-area: 1/1/2/2;
     margin: 1rem auto;
   }
@@ -1221,8 +1259,8 @@ th h4 {
     margin-left: auto;
     margin-right: auto;
   }
-  .foot-widgettext {
-    padding: 1rem 0;
+  .icon-container {
+    min-width: 360px;
   }
   .footcontact .con-box {
     max-width: 300px;
@@ -1407,6 +1445,9 @@ th h4 {
   }
   .footcredit {
     flex-direction: column;
+  }
+  .icon-container {
+    min-width: 260px;
   }
   #text-muted {
     font-size: 0.8rem;

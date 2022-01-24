@@ -3,16 +3,19 @@ const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
 const menuBtn = document.querySelector(".menu-btn");
 const cancelBtn = document.querySelector(".cancel-btn");
+
 menuBtn.onclick = () => {
     navbar.classList.add("show");
     menuBtn.classList.add("hide");
     body.classList.add("disabled");
 }
+
 cancelBtn.onclick = () => {
     body.classList.remove("disabled");
     navbar.classList.remove("show");
     menuBtn.classList.remove("hide");
 }
+
 window.onscroll = () => {
     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
@@ -22,11 +25,12 @@ let copyYear = "2021";
 let now = new Date;
 let curYear = now.getFullYear();
 let credit = document.getElementById("text-muted");
+
 if (copyYear == curYear) credit.innerHTML = copyYear + ", The HAUKAI";
 else credit.innerHTML = copyYear + "-" + curYear + ", The HAUKAI";
 
 // contact page: submit button click
-window.onload = function () {  // event run after entire page loading, including its content
+if(document.getElementById("submit")){
     document.getElementById("submit").addEventListener("click", function(event) {
         event.preventDefault(); // prevent opening the URL
         let name = document.getElementById("cus_name");
@@ -48,4 +52,19 @@ window.onload = function () {  // event run after entire page loading, including
             }
         }
     })
+}
+
+// modal
+let modal = document.getElementById("myModal");
+
+if(document.getElementById("myBtn")){
+    document.getElementById("myBtn").onclick = function() {
+        modal.style.display = "block";
+    }      
+}
+
+if(document.getElementById("close")){
+    document.getElementById("close").onclick = function() {
+        modal.style.display = "none";
+    }
 }

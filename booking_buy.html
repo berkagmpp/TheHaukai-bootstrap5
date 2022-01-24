@@ -79,22 +79,27 @@
                             book. Proof of vaccination will be required until New Zealand Health mandates that 
                             hospitality venues may welcome unvaccinated guests.</p>
                         <!-- button for opening the modal -->
-                        <div class="btn_book_area">
-                            <button id="btn_acknow" aria-label="I acknowledge button">I ACKNOWLEDGE</button>
+                        <div class="btn_book_area" aria-label="Booking button">
+                            <button type="button" class="btn_book" data-bs-toggle="modal" id="myBtn" 
+                            data-bs-target="#staticBackdrop"> I ACKNOWLEDGE </button>
                         </div>
                     </div>
-
                 </div>    
             </div>
             <!-- modal -->
-            <div id="myModal" class="modal" aria-label="Opening Google form modal for booking a table">
+            <div class="modal" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" 
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"
+                aria-label="Opening Google form modal for booking a table">
                 <div class="modal-dialog">
-                    <div class="modal-content" >
-                        <div class="close">&times;</div>
-                        <div class= "iframe-form">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <input type="image" class="btn-x" rol="button" id="close" src="img/times.png" alt="Cancel button">
+                        </div>
+                        <div class="iframe-form">
                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSci4dXFoLO9jb2-HN1GLrOw9uhUBbQ-1tlnNEvXlKVBbP6eeg/viewform?embedded=true" 
-                                    scrolling="no" width="640" height="1440" frameborder="0" marginheight="0" marginwidth="0"
+                                    scrolling="no" width="100%" height="1440" frameborder="0" marginheight="0" marginwidth="0"
                                     title="Google form for booking a table">Loading…</iframe>
+                    
                         </div>
                     </div>
                 </div>
@@ -106,46 +111,42 @@
     
     <!-- Footer -->
     <footer>
-        <div class="foot">
-            <div class="content">
-                <div class="content-container">
-                    <!-- sns icons -->
-                    <div class="footicon" role="img" aria-label="SNS icons">
-                        <div class="icon-container">
-                            <img src="img/icon_facebook.png" alt="Facebook icon">
-                            <img src="img/icon_insta.png" alt="Instagram icon">
-                            <img src="img/icon_google.png" alt="Google icon">
-                            <img src="img/icon_youtube.png" alt="Youtube icon">
-                            <img src="img/icon_pinter.png" alt="Pinterest icon">
-                        </div>
-                        <div class="foot-opentext" aria-label="Hours information">
-                            <h4>OPENING HOURS</h4><p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed</p>
-                        </div>
+        <div class="content">
+            <div class="content-container">
+                <!-- sns icons -->
+                <div class="footicon" role="img" aria-label="SNS icons">
+                    <div class="icon-container">
+                        <img src="img/icon_facebook.png" role="link" href="https://www.facebook.com/" target="_blank" alt="Facebook icon">
+                        <img src="img/icon_insta.png" role="link" href="https://www.instagram.com/" target="_blank" alt="Instagram icon">
+                        <img src="img/icon_youtube.png" role="link" href="https://www.youtube.com/" target="_blank" alt="Youtube icon">
+                        <img src="img/icon_pinter.png" role="link" href="https://www.pinterest.nz/" target="_blank" alt="Pinterest icon">
                     </div>
-                    <!-- footer-nav -->
-                    <div class="footnav" role="navigation" aria-label="Footer navigation">
-                        <ul class="menu-list">
-                            <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
-                            <li><a href="#">TERMS &amp; CONDITIONS</a></li>
-                            <li><a href="contact.html">CONTACT &amp; HELP</a></li>
-                            <li><a href="#">FOR EMPLOYEES</a></li>
-                        </ul>
+                    <div class="foot-opentext" aria-label="Hours information">
+                        <h4>OPENING HOURS</h4>
+                        <p>WED to SUN : 17:00 - 23:00<br>MON & TUE : Closed<br>HOLIDAYS : 17:00 - 23:00</p>
                     </div>
-                    <!-- footer-contact -->
-                    <div class="footcontact" aria-label="Contanct information">
-                            <div class="con-phone">
-                                <p>09 401 4019</p>
-                            </div>
-                            <div class="con-address">
-                                <p>1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
-                            </div>
+                </div>
+                <!-- footer-nav -->
+                <div class="footnav" role="navigation" aria-label="Footer navigation">
+                    <ul class="menu-list">
+                        <li><a href="privacy_policy.html">PRIVACY POLICY</a></li>
+                        <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+                        <li><a href="contact.html">CONTACT &amp; HELP</a></li>
+                        <li><a href="#">FOR EMPLOYEES</a></li>
+                    </ul>
+                </div>
+                <!-- footer-contact -->
+                <div class="footcontact" aria-label="Contanct information">
+                    <div class="con-phone">
+                        <p>09 401 4019</p>
                     </div>
-                    <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
-                        <span id="text-muted" aria-label="Copyright information"></span>
-                        <span>&nbsp;All Rights Reserved.</span>
-                    </div>
-                </div>        
-            </div>
+                    <p class="con-address">1 Island Street<br>Kerikeri, Bay of Islands<br>New Zealand</p>
+                </div>
+                <div class="footcredit" aria-label="Copyright display" aria-labelledby="text-muted">
+                    <span id="text-muted" aria-label="Copyright information"></span>
+                    <span>&nbsp;All Rights Reserved.</span>
+                </div>
+            </div>        
         </div>
     </footer>
     <!-- End footer -->
