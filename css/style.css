@@ -364,6 +364,7 @@ input, textarea {
   cursor: pointer;
   background-color: transparent;
   border: 5px solid transparent;
+  color: #ad743e;
 }
 
 .blog .img {
@@ -494,7 +495,6 @@ input, textarea {
 }
 
 .menu-list li a:hover {
-  color: #d89e68;
   font-weight: 700;
 }
 
